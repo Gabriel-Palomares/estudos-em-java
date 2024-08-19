@@ -1,5 +1,7 @@
 package AulasFaculdade.LinguagensETecnicasDeProgramacao;
 
+
+import java.util.Objects;
 import java.util.Scanner;
 
 public class ExerciciosAplicadosEmSala {
@@ -13,7 +15,11 @@ public class ExerciciosAplicadosEmSala {
                 3 - exercicio Cálculo do Volume de uma Lata de Óleo
                 4 - exercicio Troca de Valores entre Variáveis
                 5 - exercicio Operações de Adição e Multiplicação
-               
+                6 - Maioridade e Habilitação
+                7 - Verificação de Horário de Funcionamento
+                8 - Análise de Notas
+                9 - Verificação de Login
+                10 - Controle de Tráfego
                 """);
         int opcao = scanner.nextInt();
 
@@ -103,7 +109,7 @@ public class ExerciciosAplicadosEmSala {
                     int valorB = scanner.nextInt();
                     System.out.print("insira o valor C: ");
                     int valorC = scanner.nextInt();
-                    System.out.println("insira o valor D: ");
+                    System.out.print("insira o valor D: ");
                     int valorD = scanner.nextInt();
 
                     System.out.printf("""
@@ -130,6 +136,141 @@ public class ExerciciosAplicadosEmSala {
                             devem ser somados e multiplicados os valores de:
                             C com D = %d e %d respectivamente
                             """, valorC + valorD, valorC * valorD);
+                    break;
+
+                case 6:
+                    System.out.print("Digite sua idade: ");
+                    int idade = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Você possui carteira de motorista válida? (sim/não): ");
+                    String possuiCarteira = scanner.nextLine();
+                    if (idade >= 18 && possuiCarteira.equalsIgnoreCase("sim")) {
+                        System.out.println("Você está apto a dirigir");
+                    } else {
+                        System.out.println("Você não está apto a dirigir");
+                    }
+                    scanner.close();
+                    break;
+
+
+                case 7:
+                    System.out.print("Em que dia da semana estamos ");
+                    int diaDaSemana = scanner.nextInt();
+
+                    if(diaDaSemana >= 2 && diaDaSemana <= 6){
+                        System.out.print("Que horas são: ");
+                        int horarioDiaDeSemana = scanner.nextInt();
+                        if (horarioDiaDeSemana >= 9 && horarioDiaDeSemana <= 18){
+                            System.out.println("a loja esta aberta");
+                            break;
+                        } else if (horarioDiaDeSemana < 9){
+                            System.out.println("a loja esta fechada, tente em algumas horas");
+                            break;
+                        } else {
+                            System.out.println("Volte outro dia");
+                        }
+
+                    }else if (diaDaSemana == 7) {
+                        System.out.println("que horas são: ");
+                        int horarioSabado = scanner.nextInt();
+                        if (horarioSabado >=10 && horarioSabado <= 14){
+                            System.out.println("a loja esta aberta");
+                            break;
+                        }else if (horarioSabado < 10){
+                            System.out.println("a loja esta fechada, tente em algumas horas");
+                            break;
+                        }else {
+                            System.out.println("A Loja ja fechou, volte na segunda");
+                        }
+                    }else if (diaDaSemana == 1){
+                        System.out.println("Hoje a loja não abre. Volte amanhã");
+                        break;
+                    }else {
+                        System.out.println("entrada invalida");
+                        break;
+                    }
+
+
+                case 8:
+
+                    System.out.print("""
+                            Bem vindo.
+                            Vamos checar o status do seu periodo.
+                            Insira sua nota de Matematica:
+                            """);
+                    double notaMatematica = scanner.nextDouble();
+                    System.out.print("insira sua nota de Portugues: ");
+                    double notaPortugues = scanner.nextDouble();
+                    System.out.print("insira sua nota de Ciencias: ");
+                    double notaCiencias = scanner.nextDouble();
+                    double media = (notaMatematica + notaPortugues + notaCiencias) / 3;
+                    if (media >= 7 && notaPortugues >= 5 && notaMatematica >= 5 && notaCiencias >=5){
+                        System.out.println("Voce esta aprovado!! Parabens.");
+                    }else {
+                        System.out.println("Reprovado");
+                    }
+                    break;
+
+                case 9:
+
+                    System.out.print("""
+                            ********************************
+                            *                              *
+                            *         Área de Login        *
+                            *                              *
+                            *  Usuário: __________________ *
+                            *  Senha:   __________________ *
+                            *                              *
+                            *     [ Login ]    [ Sair ]    *
+                            *                              *
+                            ********************************
+                            """);
+                    System.out.println("qual seu nome de usuario");
+                    String usuario = scanner.nextLine();
+                    System.out.println("qual sua senha");
+                    String senha = scanner.nextLine();
+
+                    if (Objects.equals(usuario, "admin") && Objects.equals(senha, "1234")){
+                        System.out.print("""
+                            ********************************
+                            *                              *
+                            *         Área de Login        *
+                            *                              *
+                            *      Login bem sucedido      *
+                            *                              *
+                            *                              *
+                            ********************************
+                            """);
+                    }else{
+                        System.out.print("""
+                            *******************************
+                            *                             *
+                            *        Área de Login        *
+                            *                             *
+                            *         Login Falhou        *
+                            *                             *
+                            *                             *
+                            ********************************
+                            """);
+                    }
+                    break;
+                case 10:
+
+                    System.out.print("""
+                            Vamos atravessar a rua em segurança
+                            responda true para sim.
+                            responda false para não.
+                            tem algum carro vindo a direita
+                            """);
+                    boolean carroADireita = scanner.nextBoolean();
+                    System.out.println("tem algum carro vindo a esquerda ");
+                    boolean carroAEsquerda = scanner.nextBoolean();
+
+                    if (!carroAEsquerda && !carroADireita){
+                        System.out.println("É seguro atravessar");
+                    }else {
+                        System.out.println("Não atravesse ainda");
+                    }
                     break;
 
             default:
