@@ -49,3 +49,41 @@ teste A = 10, B = 20;
       A = 20 + 10;
       B = 30 - 20;
       A = 30 - 10;
+
+                                        DIA 19/08/2024
+
+crie um fluxograma e em pseudocodigo que leia dois numeros, efetue a soma e, caso a soma seja maior do que 10, informe o resultado:
+
+Algoritmo "soma"
+var numeroA, numeroB, resultado: int
+inicio
+Escreva ("digite o primeiro numero")
+leia (numeroA)
+Escreva ("digite o segundo numero")
+leia (numeroB)
+resultado := numeroA + numeroB
+se (resultado >= 10)entao
+escreva ("a soma dos valores é maior que 10")
+senao
+escreva ("a soma dos valores é menor que 10")
+fimse
+fimalgoritmo
+
+
+ler dois valores numericos inteiros e apresentar o resto da divisao do maior pelo menor:
+Algoritmo "numerosInteiros"
+var valor1, valor2, resto: int
+Inicio
+Escreva
+Escreva ("digite o primeiro valor")
+leia (valor1)
+Escreva ("digite o segundo valor")
+leia (valor2)
+se (valor1 > valor2) entao
+resto = (valor1 mod valor2)
+Escreva ("o resto é ", resto)
+senao
+resto = (valor2 mod valor1)
+escreva ("o resto é ", resto)
+fimse
+fimalgoritmo

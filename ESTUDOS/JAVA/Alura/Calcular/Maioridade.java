@@ -4,7 +4,7 @@ import java.util.Scanner;
 //importe a biblioteca scanner
 
 public class Maioridade {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
         //escreva o Scanner maiusculo.
         System.out.println("me informe a sua idade: ");

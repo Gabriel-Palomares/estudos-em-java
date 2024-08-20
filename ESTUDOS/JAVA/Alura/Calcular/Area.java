@@ -3,7 +3,7 @@ package JAVA.Alura.Calcular;
 import java.util.Scanner;
 
 public class Area {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("""
         qual tipo de area voce deseja calcular:

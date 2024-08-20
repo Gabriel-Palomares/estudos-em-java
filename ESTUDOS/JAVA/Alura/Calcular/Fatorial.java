@@ -3,7 +3,7 @@ package JAVA.Alura.Calcular;
 import java.util.Scanner;
 
 public class Fatorial {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("qual numero inteiro voce deseja saber o fatorial: ");
         int numero = scanner.nextInt();

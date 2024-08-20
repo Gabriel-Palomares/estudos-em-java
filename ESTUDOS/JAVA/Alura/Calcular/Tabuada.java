@@ -3,7 +3,7 @@ package JAVA.Alura.Calcular;
 import java.util.Scanner;
 
 public class Tabuada {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("voce quer saber a tabuada de qual numero: ");
         int numero = scanner.nextInt();

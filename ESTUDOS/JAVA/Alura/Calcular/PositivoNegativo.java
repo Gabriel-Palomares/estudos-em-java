@@ -3,7 +3,7 @@ package JAVA.Alura.Calcular;
 import java.util.Scanner;
 
 public class PositivoNegativo {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Insira um valor para verificar se é positivo ou não");

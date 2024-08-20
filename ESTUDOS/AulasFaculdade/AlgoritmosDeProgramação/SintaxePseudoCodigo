@@ -1,0 +1,111 @@
+Sintaxe de Pseudocódigo
+
+Declaração de Variáveis
+variável ← valor
+Exemplo:
+idade ← 25
+nome ← "João"
+
+
+Entrada de Dados
+Leia variável
+Exemplo:
+Leia idade
+Leia nome
+
+
+Saída de Dados
+Escreva variável
+Exemplo:
+Escreva idade
+Escreva "Olá, " + nome
+
+
+Estruturas Condicionais
+Se - Então - Senão
+Se condição Então
+    // Código a ser executado se a condição for verdadeira
+Senão
+    // Código a ser executado se a condição for falsa
+FimSe
+Exemplo:
+plaintext
+Copiar código
+Se idade >= 18 Então
+    Escreva "Maior de idade"
+Senão
+    Escreva "Menor de idade"
+FimSe
+
+
+Estruturas de Repetição
+Enquanto (Loop While)
+Enquanto condição Faça
+    // Código a ser executado enquanto a condição for verdadeira
+FimEnquanto
+Exemplo:
+Enquanto contador < 10 Faça
+    Escreva contador
+    contador ← contador + 1
+FimEnquanto
+
+
+Para (Loop For)
+Para i de início até fim Faça
+    // Código a ser executado para cada valor de i
+FimPara
+Exemplo:
+plaintext
+Copiar código
+Para i de 1 até 10 Faça
+    Escreva i
+FimPara
+
+
+Estrutura de Função ou Procedimento
+Função NomeDaFunção(parâmetros)
+    // Código da função
+    Retorne valor
+FimFunção
+Exemplo:
+Função Soma(a, b)
+    resultado ← a + b
+    Retorne resultado
+FimFunção
+
+Operadores Lógicos
+E (AND)
+Se (condição1 E condição2) Então
+OU (OR)
+Se (condição1 OU condição2) Então
+NÃO (NOT)
+Se (NÃO condição) Então
+Operadores Relacionais
+Igual: =
+Diferente: ≠
+Maior que: >
+Menor que: <
+Maior ou igual a: >=
+Menor ou igual a: <=
+
+Exemplo Completo de Pseudocódigo
+variável idade ← 0
+
+Escreva "Digite sua idade:"
+Leia idade
+
+Se idade >= 18 Então
+    Escreva "Você é maior de idade."
+Senão
+    Escreva "Você é menor de idade."
+FimSe
+
+Para i de 1 até 5 Faça
+    Escreva "Este é o número ", i
+FimPara
+
+Função DobrarValor(valor)
+    Retorne valor * 2
+FimFunção
+
+Escreva "O dobro de 10 é ", DobrarValor(10)

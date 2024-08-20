@@ -3,7 +3,7 @@ package JAVA.Alura.Calcular;
 import java.util.Scanner;
 
 public class CalculadoraSimples {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("quais valores voce quer obter os resultados das 4 operacoes: ");
         System.out.println("valor 1: ");

@@ -1,7 +1,7 @@
 package JAVA.Alura.Calcular;
 
 public class Dobroo {
-    public static void main(String[] args) {
+    public static void main() {
         Dobro dobro = new Dobro();
 
         int resultado = dobro.dobro(9);

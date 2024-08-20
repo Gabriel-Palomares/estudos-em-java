@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class ExerciciosAplicadosEmSala {
-    public static void main(String[] args) {
+    public static void main() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -55,16 +55,16 @@ public class ExerciciosAplicadosEmSala {
 
                         case 1:
                             System.out.println("insira a temperatura em Celsius: ");
-                            int tempCPF = scanner.nextInt();
-
-                            System.out.println("a temperatura em Fahrenheit é: " + ((tempCPF * 9 / 5) + 32));
+                            double tempCPF = scanner.nextInt();
+                            double conversorCpF = ((tempCPF * 9 / 5) + 32);
+                            System.out.printf("A temperatura em Fahrenheit é %.1f", conversorCpF );
                             break;
 
                         case 2:
-                            System.out.println("insira a temperatura em Fahrenheit: ");
-                            int tempFPC = scanner.nextInt();
-
-                            System.out.println("a temperatura em Fahrenheit é: " + ((tempFPC - 32) * 5 / 9));
+                            System.out.print("insira a temperatura em Fahrenheit: ");
+                            double tempFPC = scanner.nextInt();
+                            double conversorFpC = ((tempFPC - 32) * 5 / 9);
+                            System.out.printf("A temperatura em Celsius é %.1f ", conversorFpC);
                             break;
 
                         default:
@@ -95,7 +95,7 @@ public class ExerciciosAplicadosEmSala {
                     valor2 = valor1 - valor2;
                     valor1 = valor1 - valor2;
                     System.out.println("prontinho os valores atribuídos foram invertidos");
-                    System.out.printf("valor 1 = " + valor1 + " e o valor 2 = " + valor2);
+                    System.out.printf("valor 1 = %d, valor 2 = %d ", valor1, valor2);
                     break;
 
                 case 5:
