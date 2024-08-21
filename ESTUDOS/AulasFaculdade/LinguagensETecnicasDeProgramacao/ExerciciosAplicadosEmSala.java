@@ -54,13 +54,15 @@ public class ExerciciosAplicadosEmSala {
                     switch (opcao2) {
 
                         case 1:
+
                             System.out.println("insira a temperatura em Celsius: ");
                             double tempCPF = scanner.nextInt();
                             double conversorCpF = ((tempCPF * 9 / 5) + 32);
-                            System.out.printf("A temperatura em Fahrenheit é %.1f", conversorCpF );
+                            System.out.printf("A temperatura em Fahrenheit é %.1f", conversorCpF);
                             break;
 
                         case 2:
+
                             System.out.print("insira a temperatura em Fahrenheit: ");
                             double tempFPC = scanner.nextInt();
                             double conversorFpC = ((tempFPC - 32) * 5 / 9);
@@ -73,6 +75,7 @@ public class ExerciciosAplicadosEmSala {
                     }
                 break;
                 case 3:
+
                     System.out.println("Vamos calcular o volume do objeto me passe as medidas em metros");
                     System.out.println("qual o raio do objeto: ");
                     float raio = scanner.nextFloat();
@@ -83,6 +86,7 @@ public class ExerciciosAplicadosEmSala {
                     break;
 
                 case 4:
+
                     System.out.print("""
                             Vamos começar.
                             Quais são os valores que você deseja testar
@@ -99,6 +103,7 @@ public class ExerciciosAplicadosEmSala {
                     break;
 
                 case 5:
+
                     System.out.print("""
                             vamos começar
                             insira os 4 valores para serem feitas as operações
@@ -139,6 +144,7 @@ public class ExerciciosAplicadosEmSala {
                     break;
 
                 case 6:
+
                     System.out.print("Digite sua idade: ");
                     int idade = scanner.nextInt();
                     scanner.nextLine();
@@ -154,6 +160,7 @@ public class ExerciciosAplicadosEmSala {
 
 
                 case 7:
+
                     System.out.print("Em que dia da semana estamos ");
                     int diaDaSemana = scanner.nextInt();
 
@@ -213,6 +220,8 @@ public class ExerciciosAplicadosEmSala {
 
                 case 9:
 
+                //usuario e senha cadastrado por padrao: admin e 1234 respectivamente;
+
                     System.out.print("""
                             ********************************
                             *                              *
@@ -226,9 +235,9 @@ public class ExerciciosAplicadosEmSala {
                             ********************************
                             """);
                     System.out.println("qual seu nome de usuario");
-                    String usuario = scanner.nextLine();
+                    String usuario = scanner.next();
                     System.out.println("qual sua senha");
-                    String senha = scanner.nextLine();
+                    String senha = scanner.next();
 
                     if (Objects.equals(usuario, "admin") && Objects.equals(senha, "1234")){
                         System.out.print("""
@@ -241,17 +250,27 @@ public class ExerciciosAplicadosEmSala {
                             *                              *
                             ********************************
                             """);
-                    }else{
+                    }else if (Objects.equals(usuario, "admin") && !Objects.equals(senha, "1234")){
                         System.out.print("""
-                            *******************************
-                            *                             *
-                            *        Área de Login        *
-                            *                             *
-                            *         Login Falhou        *
-                            *                             *
-                            *                             *
+                            ********************************
+                            *                              *
+                            *        Área de Login         *
+                            *         Login Falhou         *
+                            *       Senha Incorreta        *
+                            *                              *
                             ********************************
                             """);
+                    }else{
+                        System.out.print("""
+                            ********************************
+                            *                              *
+                            *        Área de Login         *
+                            *         Login Falhou         *
+                            *      Usuario Inexistente     *
+                            *                              *
+                            ********************************
+                            """);
+
                     }
                     break;
                 case 10:
@@ -277,8 +296,5 @@ public class ExerciciosAplicadosEmSala {
                 System.out.print("entrada invalida");
                 break;
         }
-
-
     }
-
 }
