@@ -1,0 +1,5 @@
+operador ternario
+String resultado = a == b ? "verdadeiro" : "falso";
+
+forma reduzida de utilizar if else no caso de ter duas opções (booleano) .
+

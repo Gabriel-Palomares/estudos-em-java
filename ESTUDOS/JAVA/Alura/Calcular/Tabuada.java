@@ -13,8 +13,8 @@ public class Tabuada {
             int resultado = i * numero;
             System.out.printf("""
                     %d * %d = %d
-                    """, numero, i, resultado);
-            i++;
+                    """, numero, i++, resultado);
+            //i++ foi inserido dentro da concatenação
         }
     }
 }
