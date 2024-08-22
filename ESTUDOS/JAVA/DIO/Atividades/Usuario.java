@@ -1,18 +1,22 @@
 package JAVA.DIO.Atividades;
 
 public class Usuario {
-    public static void main(String[] args) {
-        SmartTv smartTv = new SmartTv();
+    public static void main() {
+        SmartTv samsung = new SmartTv();
 
-        System.out.println("TV ligada ? " + smartTv.ligada);
-        System.out.println("Canal atual ? " + smartTv.canal);
-        System.out.println("Volume atual ? " +smartTv.volume);
+        System.out.println("TV ligada ? " + samsung.ligada);
+        System.out.println("Canal atual ? " + samsung.canal);
+        System.out.println("Volume atual ? " +samsung.volume);
 
-        smartTv.ligar();
-        System.out.println("TV ligada ? " + smartTv.ligada);
+        samsung.ligar();
+        System.out.println("TV ligada ? " + samsung.ligada);
 
-        smartTv.aumentarVolume();
+        samsung.aumentarVolume();
 
-        System.out.println("Volume atual " + smartTv.volume);
+        System.out.println("Volume atual " + samsung.volume);
+
+        samsung.mudarCanal(10);
+
+        System.out.println(samsung.canal);
     }
 }

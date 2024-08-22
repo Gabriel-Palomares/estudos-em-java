@@ -17,4 +17,13 @@ public class SmartTv {
     public void diminuirVolume(){
         volume --;
     }
+    public void proxCanal(){
+        canal++;
+    }
+    public void anteCanal(){
+        canal--;
+    }
+    public void mudarCanal(int canal){
+        this.canal = canal;
+    }
 }
