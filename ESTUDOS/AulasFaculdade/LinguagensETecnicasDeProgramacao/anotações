@@ -1,5 +1,12 @@
-operador ternario
+operador ternario:
 String resultado = a == b ? "verdadeiro" : "falso";
+forma reduzida de utilizar if else no caso de ter duas opções (booleano).
 
-forma reduzida de utilizar if else no caso de ter duas opções (booleano) .
+operadores logicos:
+&& E, ambas condições tem que ser verdadeiras
+|| OU, uma das duas tem que ser verdadeira
 
+Metodos:
+Ser nomeado como verbo e seguir o padrão camelCase.
+NÃO EXISTEM METODOS GLOBAIS cada metodo sempre estara dentro de uma classe especifica
+Caso um metodo não retorne nenhum valor ele sera antecedido pela palavra "void"
