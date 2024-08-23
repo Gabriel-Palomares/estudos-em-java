@@ -227,38 +227,49 @@ public class ExerciciosAplicadosEmSala {
                             *                              *
                             *         Área de Login        *
                             *                              *
-                            *  Usuário: __________________ *
-                            *  Senha:   __________________ *
+                            *  Usuário:                    *
+                            *  Senha:                      *
                             *                              *
                             *     [ Login ]    [ Sair ]    *
                             *                              *
                             ********************************
                             """);
-                    System.out.println("qual seu nome de usuario");
+
                     String usuario = scanner.next();
-                    System.out.println("qual sua senha");
+                    System.out.printf("""
+                            ********************************
+                            *
+                            *         Área de Login
+                            *
+                            *  Usuário: %s
+                            *  Senha:
+                            *
+                            *     [ Login ]    [ Sair ]
+                            *
+                            ********************************
+                            """, usuario);
                     String senha = scanner.next();
 
                     if (Objects.equals(usuario, "admin") && Objects.equals(senha, "1234")){
-                        System.out.print("""
+                        System.out.printf("""
                             ********************************
                             *                              *
                             *         Área de Login        *
                             *                              *
                             *      Login bem sucedido      *
-                            *                              *
+                            *        Bem - Vindo: %s       *
                             *                              *
                             ********************************
-                            """);
+                            """, usuario);
                     }else if (Objects.equals(usuario, "admin") && !Objects.equals(senha, "1234")){
                         System.out.print("""
-                            ********************************
-                            *                              *
-                            *        Área de Login         *
-                            *         Login Falhou         *
-                            *       Senha Incorreta        *
-                            *                              *
-                            ********************************
+                            *********************************
+                            *                               *
+                            *         Área de Login         *
+                            *         Login Falhou          *
+                            *        Senha Incorreta        *
+                            *                               *
+                            *********************************
                             """);
                     }else{
                         System.out.print("""
