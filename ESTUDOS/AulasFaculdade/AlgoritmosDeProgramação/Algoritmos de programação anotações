@@ -87,3 +87,62 @@ resto = (valor2 mod valor1)
 escreva ("o resto é ", resto)
 fimse
 fimalgoritmo
+
+
+                                                      dia 27/08/2024
+
+correção
+
+algoritmo "Reajuste"
+var salario, reajuste: real
+Inicio
+    Escreva ("digite aqui seu salario")
+    leia (salario)
+
+se (salario < 1500) então
+    reajuste <- 0.15
+        senao
+        se (salario <= 2000) então
+            reajuste <- 0.10
+                senao
+                    reajuste <- 0.05
+        fimse
+fimse
+salario <- salario + (salario * reajuste)
+Escreva("o seu salario ajustado é ", salario)
+finalDoAlgoritmo
+
+
+
+algoritmo "DivisivelPor4E5"
+var numero, resto: int
+Inicio
+    Escreva ("Digite qual numero deseja verificar")
+    Leia (numero)
+    resto = numero mod 4 + numero mod 5
+    se (resto == 0) então
+        Escreva (o numero é divisivel")
+            senao
+            Escreva ("o numero não é divisivel")
+    fimse
+finalDoAlgoritmo
+
+
+
+algoritmo "compra"
+var pagamento: caracter
+var valor: double
+Inicio
+    Escreva("qual valor do produto a ser pago")
+    Leia (valor)
+    Escreva("qual metodo de pagamento: Pix, Dinheiro ou Cartão")
+    Leia (pagamento)
+
+    se(pagameto == pix . ou . pagamento == dinheiro)então
+        Escreva ("a sua compra deu: " + valor - (valor * 0.10))
+        senao
+            Escreva ("a sua compra deu: " + valor)
+    fimse
+finalDoAlgoritmo
+
+

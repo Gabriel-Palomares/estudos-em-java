@@ -73,10 +73,10 @@ Função Soma(a, b)
     Retorne resultado
 FimFunção
 
-Operadores Lógicos
-E (AND)
+Operadores Lógicos PseudoCódigo e Fluxograma
+              E (AND)           |    . e .
 Se (condição1 E condição2) Então
-OU (OR)
+              OU (OR)           |    . ou .
 Se (condição1 OU condição2) Então
 NÃO (NOT)
 Se (NÃO condição) Então

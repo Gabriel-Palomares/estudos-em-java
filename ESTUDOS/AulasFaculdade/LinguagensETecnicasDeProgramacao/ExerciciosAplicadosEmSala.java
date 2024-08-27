@@ -407,7 +407,7 @@ public class ExerciciosAplicadosEmSala {
                     System.out.printf("""
                         a soma dos valores da %d
                         """, soma);
-                    
+
                 }
 
                 break;
