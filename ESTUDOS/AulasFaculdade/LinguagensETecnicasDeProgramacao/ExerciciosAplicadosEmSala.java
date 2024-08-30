@@ -25,6 +25,13 @@ public class ExerciciosAplicadosEmSala {
                 10 - Controle de Tráfego
                 11 - Descubra quanto tempo você ja viveu
                 12 - Calculo de média simples de 3 inteiros
+                13 - Verificação de Número Par ou Ímpar
+                14 - Calculadora de Fatorial
+                15 - Soma de Números até o Zero
+                16 - Gerador de Calendário Mensal
+                17 - Calculadora de Potências
+                18 - Verificador de Número Primo
+                19 - fibbonat
                 """);
         int opcao = scanner.nextInt();
 
@@ -396,20 +403,85 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 15:
-                int soma = 0;
                 System.out.println("""
-                        me informe quais valores deseja somar:
+                        me informe qual valor inicial.
                         some 0 se deseja encerrar.
                         """);
                 int valor = scanner.nextInt();
-                soma += valor;
+                int soma = 0;
                 while (valor != 0){
+                    soma += valor;
                     System.out.printf("""
-                        a soma dos valores da %d
-                        """, soma);
-
+                            insira qual valor deseja somar com o %d
+                            """, soma);
+                    valor = scanner.nextInt();
                 }
 
+            case 16:
+
+
+                break;
+
+            case 17:
+                System.out.println("""
+                        Calculadora de potencia
+                        me informe qual numero deseja calcular (informe sua base):
+                        """);
+                int numeroPotencia = scanner.nextInt();
+                System.out.printf("o numero %d sera elevado a qual portencia: ", numeroPotencia);
+                double potencia = scanner.nextInt();
+                double resultado = numeroPotencia * numeroPotencia;
+
+                if (potencia == 0){
+                    System.out.println("resultado é 1");
+                    break;
+
+                } else if (potencia == 1){
+                    System.out.printf("resultado é %d ", numeroPotencia);
+                    break;
+
+                }else if (potencia > 1){
+                    for (int i = 2; i < potencia; i++){
+                        resultado *= numeroPotencia;
+                    }
+                    System.out.printf("resultado de %d elevado a %.0f é %.0f ", numeroPotencia, potencia, resultado);
+                    break;
+                }else{
+                    for (int i = 0; i > potencia; i--){
+                        resultado = resultado * numeroPotencia;
+                    }
+                    double resultadoNegativo = 1.00 / resultado;
+                    System.out.printf("resultado de %d elevado a %.0f é %.3f ", numeroPotencia, potencia, resultadoNegativo);
+
+                }
+                break;
+
+            case 19:
+                System.out.println("""
+                        vamos iniciar
+                        qual intervalo voce deseja fazer de fibonacci
+                        """);
+                int intervalo = scanner.nextInt();
+                int i;
+                int termo1 = 0;
+                int termo2 = 1;
+                for (i = 1; i < intervalo; i++){
+                    int resultadoFibonacci = termo1 + termo2;
+
+                    termo1 = termo2;
+                    termo2 = resultadoFibonacci;
+                    System.out.println(resultadoFibonacci);
+                }
+                break;
+
+            case 20:
+                System.out.println("""
+                        Até qual numero voce deseja obter de PI:
+                        """);
+
+                for (float n = 1; n <= 16; n++){
+                    System.out.println(1 / n);
+                }
                 break;
             default:
                 System.out.print("entrada invalida");
