@@ -32,24 +32,30 @@ public class ExerciciosAplicadosEmSala {
                 17 - Calculadora de Potências
                 18 - Verificador de Número Primo
                 19 - fibbonat
+                20 - PI (inacabado)
+                21 -
                 """);
         int opcao = scanner.nextInt();
 
         switch (opcao) {
 
             case 1:
+
                 System.out.println("Vamos calcular quantos litros foram gastos na viagem");
                 System.out.println("quantos km seu carro faz por litro: ");
                 int consumo = scanner.nextInt();
+
                 System.out.print("Quanto tempo durou a viagem em horas: ");
                 double tempo = scanner.nextInt();
-                System.out.print("Qual foi a velocidade média durante a viagem: ");
-                int velocidade = scanner.nextInt();
 
+                System.out.print("Qual foi a velocidade média durante a viagem: ");
+
+                int velocidade = scanner.nextInt();
                 double distancia = tempo * velocidade;
                 double litrosGastos = (distancia / consumo);
 
                 System.out.printf("Voce percorreu %.1fkm e consumiu %.2fLitros de combustivel", distancia, litrosGastos);
+
                 break;
             case 2:
                 System.out.print("""
@@ -61,7 +67,6 @@ public class ExerciciosAplicadosEmSala {
                         """);
                 //fiz um layout para o usuario selecionar qual conversão sera utilizada. neste layout usei printf ao inves de println e aspas triplas.
                 int opcao2 = scanner.nextInt();
-                //nomeei a escolha do usuario como "opcao".
 
                 switch (opcao2) {
 
