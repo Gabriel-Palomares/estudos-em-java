@@ -465,6 +465,11 @@ public class ExerciciosAplicadosEmSala {
                 }
                 break;
 
+            case 18:
+                
+                System.out.println("Não tem nada por aqui, fiquei com preguiça de fazer esse");
+                break;
+
             case 19:
 
                 System.out.println("""
