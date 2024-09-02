@@ -421,7 +421,7 @@ public class ExerciciosAplicadosEmSala {
 
             case 16:
 
-
+                System.out.println("Não tem nada por aqui, fiquei com preguiça de fazer esse");
                 break;
 
             case 17:
@@ -466,9 +466,20 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 18:
-                
-                System.out.println("Não tem nada por aqui, fiquei com preguiça de fazer esse");
-                break;
+
+                System.out.print("Bem-vindo ao verificador de numeros primos");
+                System.out.print("Digite qual numero deseja verificar: ");
+                int numeroPrimo = scanner.nextInt();
+
+                int resto1 = numeroPrimo % 2;
+                int resto2 = numeroPrimo % 3;
+                int resto3 = numeroPrimo % 5;
+
+                if (resto1 != 0 && resto2 != 0 && resto3 != 0) {
+                    System.out.printf("%d é um numero primo", numeroPrimo);
+                }else {
+                    System.out.printf("%d não é um numero primo", numeroPrimo);
+                }
 
             case 19:
 
