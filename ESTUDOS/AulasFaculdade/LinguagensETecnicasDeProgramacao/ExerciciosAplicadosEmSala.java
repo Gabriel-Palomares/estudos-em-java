@@ -31,7 +31,7 @@ public class ExerciciosAplicadosEmSala {
                 16 - Gerador de Calendário Mensal
                 17 - Calculadora de Potências
                 18 - Verificador de Número Primo
-                19 - fibbonat
+                19 - Fibbonat
                 20 - PI (inacabado)
                 21 -
                 """);
