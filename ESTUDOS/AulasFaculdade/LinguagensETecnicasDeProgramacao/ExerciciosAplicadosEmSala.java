@@ -344,15 +344,16 @@ public class ExerciciosAplicadosEmSala {
 
                     case 1:
 
-                        System.out.printf(periodo.getYears() + " anos de vida");
+                        System.out.printf("%d anos de vida", periodo.getYears());
                         break;
                     case 2:
-
-                        System.out.printf((periodo.getYears() * 12) + periodo.getMonths() + "meses de vida");
+                        int mesesDeVida = (periodo.getYears() * 12) + periodo.getMonths();
+                        System.out.printf("%d meses de vida", mesesDeVida);
                         break;
                     case 3:
-
-                        System.out.printf(((periodo.getYears() * 12) * 30.416) + (periodo.getMonths() * 30.416) + periodo.getDays() + " dias de vida aproximadamente");
+                        double diasDeVida = ((periodo.getYears() * 12) * 30.416) + (periodo.getMonths() * 30.416) + periodo.getDays();
+                        //aproximadamente 30.416 é uma média de dias que cada mês tem.
+                        System.out.printf("%.1f dias de vida aproximadamente", diasDeVida);
                         break;
 
                     default:
@@ -478,7 +479,9 @@ public class ExerciciosAplicadosEmSala {
 
                     termo1 = termo2;
                     termo2 = resultadoFibonacci;
-                    System.out.println(resultadoFibonacci);
+                    System.out.printf("""
+                            %dº - %d
+                            """, i, resultadoFibonacci);
                 }
                 break;
 
