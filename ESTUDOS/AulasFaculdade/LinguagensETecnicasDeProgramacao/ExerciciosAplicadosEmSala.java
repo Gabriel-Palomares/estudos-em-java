@@ -354,10 +354,10 @@ public class ExerciciosAplicadosEmSala {
 
                         System.out.printf(((periodo.getYears() * 12) * 30.416) + (periodo.getMonths() * 30.416) + periodo.getDays() + " dias de vida aproximadamente");
                         break;
+
                     default:
                         System.out.print("entrada invalida");
                         break;
-
                 }
                 break;
 
@@ -403,6 +403,7 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 15:
+
                 System.out.println("""
                         me informe qual valor inicial.
                         some 0 se deseja encerrar.
@@ -423,6 +424,7 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 17:
+
                 System.out.println("""
                         Calculadora de potencia
                         me informe qual numero deseja calcular (informe sua base):
@@ -463,15 +465,15 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 19:
+
                 System.out.println("""
                         vamos iniciar
                         qual intervalo voce deseja fazer de fibonacci
                         """);
                 int intervalo = scanner.nextInt();
-                int i;
                 int termo1 = 0;
                 int termo2 = 1;
-                for (i = 1; i < intervalo; i++){
+                for (int i = 1; i < intervalo; i++){
                     int resultadoFibonacci = termo1 + termo2;
 
                     termo1 = termo2;
@@ -481,6 +483,7 @@ public class ExerciciosAplicadosEmSala {
                 break;
 
             case 20:
+
                 System.out.println("""
                         Até qual numero voce deseja obter de PI:
                         """);
