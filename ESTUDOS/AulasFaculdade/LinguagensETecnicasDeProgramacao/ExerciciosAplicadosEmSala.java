@@ -427,32 +427,38 @@ public class ExerciciosAplicadosEmSala {
                         Calculadora de potencia
                         me informe qual numero deseja calcular (informe sua base):
                         """);
-                int numeroPotencia = scanner.nextInt();
-                System.out.printf("o numero %d sera elevado a qual portencia: ", numeroPotencia);
+                double numeroPotencia = scanner.nextInt();
+                System.out.printf("o numero %.0f sera elevado a qual portencia: ", numeroPotencia);
                 double potencia = scanner.nextInt();
-                double resultado = numeroPotencia * numeroPotencia;
+                double resultado = numeroPotencia;
+                double resultadoUm = 1;
 
                 if (potencia == 0){
                     System.out.println("resultado é 1");
                     break;
 
                 } else if (potencia == 1){
-                    System.out.printf("resultado é %d ", numeroPotencia);
+                    System.out.printf("resultado é %.0f ", numeroPotencia);
                     break;
 
                 }else if (potencia > 1){
-                    for (int i = 2; i < potencia; i++){
+                    for (int i = 1; i < potencia; i++){
                         resultado *= numeroPotencia;
                     }
-                    System.out.printf("resultado de %d elevado a %.0f é %.0f ", numeroPotencia, potencia, resultado);
+                    System.out.printf("resultado de %.0f elevado a %.0f é %.0f ", numeroPotencia, potencia, resultado);
                     break;
                 }else{
-                    for (int i = 0; i > potencia; i--){
-                        resultado = resultado * numeroPotencia;
+                    if (potencia == -1){
+                        resultadoUm = resultadoUm / numeroPotencia;
+                        System.out.printf("%.0f elevado a %.0f é igual a %.3f", numeroPotencia, potencia, resultadoUm);
+                    }else {
+                        for (int i = -1; i > potencia; i--){
+                           resultado *= numeroPotencia;
+                        }
+                        resultadoUm /= resultado;
+                        System.out.printf("%.0f elevado a %.0f é igual a %.3f", numeroPotencia, potencia, resultadoUm);
+                        System.out.println(1 / resultadoUm);
                     }
-                    double resultadoNegativo = 1.00 / resultado;
-                    System.out.printf("resultado de %d elevado a %.0f é %.3f ", numeroPotencia, potencia, resultadoNegativo);
-
                 }
                 break;
 
@@ -483,6 +489,8 @@ public class ExerciciosAplicadosEmSala {
                     System.out.println(1 / n);
                 }
                 break;
+
+
             default:
                 System.out.print("entrada invalida");
                 break;
