@@ -445,28 +445,18 @@ public class ExerciciosAplicadosEmSala {
                     System.out.println("resultado é 1");
                     break;
 
-                } else if (potencia == 1){
-                    System.out.printf("resultado é %.0f ", numeroPotencia);
-                    break;
-
-                }else if (potencia > 1){
+                } else if (potencia > 0){
                     for (int i = 1; i < potencia; i++){
                         resultado *= numeroPotencia;
                     }
-                    System.out.printf("resultado de %.0f elevado a %.0f é %.0f ", numeroPotencia, potencia, resultado);
+                    System.out.printf("%.0f elevado a %.0f é igual a %.0f ", numeroPotencia, potencia, resultado);
                     break;
                 }else{
-                    if (potencia == -1){
-                        resultadoUm = resultadoUm / numeroPotencia;
-                        System.out.printf("%.0f elevado a %.0f é igual a %.3f", numeroPotencia, potencia, resultadoUm);
-                    }else {
                         for (int i = -1; i > potencia; i--){
                            resultado *= numeroPotencia;
                         }
                         resultadoUm /= resultado;
                         System.out.printf("%.0f elevado a %.0f é igual a %.3f", numeroPotencia, potencia, resultadoUm);
-                        System.out.println(1 / resultadoUm);
-                    }
                 }
                 break;
 
@@ -516,6 +506,8 @@ public class ExerciciosAplicadosEmSala {
                     System.out.println(1 / n);
                 }
                 break;
+
+            case 21:
 
 
             default:
