@@ -348,7 +348,7 @@ public class ExerciciosAplicadosEmSala {
                         break;
                     case 2:
 
-                        System.out.println((periodo.getYears() * 12) + periodo.getMonths() + "meses de vida");
+                        System.out.printf((periodo.getYears() * 12) + periodo.getMonths() + "meses de vida");
                         break;
                     case 3:
 
