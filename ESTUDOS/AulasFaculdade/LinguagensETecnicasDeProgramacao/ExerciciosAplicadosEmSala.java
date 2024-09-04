@@ -510,6 +510,7 @@ public class ExerciciosAplicadosEmSala {
             case 21:
 
 
+
             default:
                 System.out.print("entrada invalida");
                 break;

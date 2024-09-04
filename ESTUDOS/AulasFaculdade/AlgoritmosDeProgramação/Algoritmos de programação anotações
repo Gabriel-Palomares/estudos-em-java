@@ -146,3 +146,86 @@ Inicio
 finalDoAlgoritmo
 
 
+
+
+
+
+
+
+
+                                                         DIA 02/09/2024   e    DIA 03/09/2024
+
+Teste de Mesa: Inverter valores atribuidos a variaveis
+
+    |   A   B
+----|-----------------------
+  1 |  12
+  2 |  12   7
+  3 |  12   19
+  4 |   7   19
+  5 |   7   12
+  6 |
+
+
+Teste de Mesa: Cumpom                       |             Fluxograma:
+                                            |             algoritmo "cupomDeDesconto"
+  A | compra   Idade   cupom                |             var compra: logico
+----|-----------------------                |             var idade: inteiro
+  1 |verdadeiro                             |             var cupomDisponivel: logico
+  2 |verdadeiro  25                         |
+  3 |verdadeiro  25    falso                |
+  4 |                                       |             Inicio
+                                            |                  Escreva("O cliente fez compras neste ultimo ano")
+  B | compra   Idade   cupom                |                  Leia (compra)
+----|-----------------------                |                  Escreva("Qual a sua idade ")
+  1 |verdadeiro                             |                  Leia (idade)
+  2 |verdadeiro  17                         |                       se(idade >= 18 . e . nao compra)
+  3 |verdadeiro  17    falso                |                          Escreva("Você esta apto a receber um cupom")
+  4 |                                       |                          cupomDisponivel = true
+                                            |                          senao
+  C | compra   Idade   cupom                |                             Escreva("Voce não esta elegivel para promoção")
+----|-----------------------                |                          fimse
+  1 | falso                                 |                      Escreva(cupomDisponivel)
+  2 | falso      16                         |                 finalDoAlgoritmo
+  3 | falso      16    falso                |
+  4 |                                       |
+                                            |
+  D | compra   Idade   cupom                |
+----|-----------------------                |
+  1 | falso                                 |
+  2 | falso     36                          |
+  3 | falso     36    verdadeiro            |
+  4 |                                       |
+                                            |
+
+                                            |               algoritmo: AnoBissexto
+                                            |               var: ano: inteiro
+                                            |
+                                            |               inicio
+                                            |               Escreva("qual ano deseja verificar")
+                                            |               leia (ano)
+                                            |
+                                            |               se (ano mod 4 = 0) e (ano mod 100 != 0) ou (ano mod 400 = 0)
+                                            |                   Escreva("o ano é bissexto")
+                                            |                   senao
+                                            |                       Escreva("o ano não é bissexto")
+                                            |               fimse
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
+                                            |
