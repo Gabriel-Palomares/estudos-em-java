@@ -1,4 +1,4 @@
-package JAVA.DIO.Atividades;
+package JAVA.DIO.ContaBancariaAtividade;
 
 public class ContaBanco {
 
@@ -7,15 +7,13 @@ public class ContaBanco {
     private String titular = "Gabriel Palomares";
     private double saldo = 237.48;
 
-    public double sacar(double novoSaldo){
+    public void sacar(double novoSaldo){
         saldo -= novoSaldo;
         System.out.printf("saldo atual %.2f", saldo);
-        return saldo;
     }
-    public double receberValor(double novoSaldo){
+    public void receberValor(double novoSaldo){
         saldo += novoSaldo;
         System.out.printf("saldo atual %.2f", saldo);
-        return saldo;
     }
     public void verSaldo(){
         System.out.printf("seu saldo atual é: %.2f", saldo);
@@ -60,3 +58,4 @@ public class ContaBanco {
         this.saldo = saldo;
     }
 }
+//não cheguei a usar alguns dos get set mas mantive no código porque existe usabilidade só que para esta demo não utilizei
