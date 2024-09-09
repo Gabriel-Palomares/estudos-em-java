@@ -33,7 +33,8 @@ public class ExerciciosAplicadosEmSala {
                 18 - Verificador de Número Primo
                 19 - Fibbonat
                 20 - PI (inacabado)
-                21 -
+                21 - Desconto em compra
+                22 - Teste Arrays
                 """);
         int opcao = scanner.nextInt();
 
@@ -509,6 +510,105 @@ public class ExerciciosAplicadosEmSala {
 
             case 21:
 
+                System.out.println("Qual valor total da compra: ");
+                double valorDaCompra = scanner.nextDouble();
+                System.out.println("""
+                        Qual metodo de pagamento:
+                        1 - Pix
+                        2 - Cartão
+                        3 - Dinheiro
+                        """);
+                int metodoDePagamento = scanner.nextInt();
+
+                if (metodoDePagamento == 1 || metodoDePagamento == 3){
+                    System.out.println("""
+                            Voce ganhou um cupom de 10% de desconto
+                            deseja aplicar:
+                            Sim  -  Não
+                            """);
+                    String aplicarCupom = scanner.next();
+                    if (Objects.equals(aplicarCupom, "sim")){
+                        double valorComDesconto = ((valorDaCompra / 100) * 90);
+                        System.out.printf("Sua compra com descontou deu %.2f", valorComDesconto);
+                    }else {
+                        System.out.printf("Sua compra deu %.2f", valorDaCompra);
+                    }
+                }else {
+                    System.out.printf("Sua compra deu %.2f", valorDaCompra);
+                }
+                break;
+
+            case 22:
+
+                System.out.println("""
+                        Qual tipo de array voce deseja testar
+                        1 - texto (string)
+                        2 - numeros (int)
+                        3 - numeros (double)
+                        
+                        0 - sair
+                        """);
+                int tipoArray = scanner.nextInt();
+
+                while(tipoArray != 0){
+                    if (tipoArray == 1){
+                        System.out.println("qual tamanho da sua array: ");
+                        int tamanhoArray = scanner.nextInt();
+                        String [] nomes = new String[tamanhoArray];
+
+                        for (int i = 0; i < nomes.length; i++){
+                            System.out.printf("""
+                                    Insira os itens da sua array. Já foram guardados %d itens
+                                    """, i);
+                            nomes [i] = scanner.nextLine();
+                        }
+                        System.out.println("Os itens da lista são: ");
+                        int i = 0;
+                        while (i < nomes.length) {
+                            System.out.println(nomes[i]);
+                            i++;
+                        }
+                        tipoArray = 0;
+                    } else if (tipoArray == 2) {
+                        System.out.println("qual tamanho da sua array: ");
+                        int tamanhoArray = scanner.nextInt();
+                        int [] numeros = new int[tamanhoArray];
+
+                        for (int i = 0; i < numeros.length; i++){
+                            System.out.printf("""
+                                    Insira os itens da sua array. Já foram guardados %d itens
+                                    """, i);
+                            numeros [i] = scanner.nextInt();
+                        }
+                        System.out.println("Os itens da lista são: ");
+                        int i = 0;
+                        while (i < numeros.length) {
+                            System.out.println(numeros[i]);
+                            i++;
+                        }
+                        tipoArray = 0;
+                    }else {
+                        System.out.println("qual tamanho da sua array: ");
+                        int tamanhoArray = scanner.nextInt();
+                        double [] numeros = new double[tamanhoArray];
+
+                        for (int i = 0; i < numeros.length; i++){
+                            System.out.printf("""
+                                    Insira os itens da sua array. Já foram guardados %d itens
+                                    """, i);
+                            numeros [i] = scanner.nextDouble();
+                        }
+                        System.out.println("Os itens da lista são: ");
+                        int i = 0;
+                        while (i < numeros.length) {
+                            System.out.println(numeros[i]);
+                            i++;
+                        }
+                        tipoArray = 0;
+                    }
+                }
+                System.out.println("Encerrando");
+                break;
 
 
             default:
