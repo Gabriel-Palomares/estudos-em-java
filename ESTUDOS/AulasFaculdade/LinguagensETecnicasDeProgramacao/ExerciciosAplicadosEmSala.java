@@ -58,6 +58,7 @@ public class ExerciciosAplicadosEmSala {
                 System.out.printf("Voce percorreu %.1fkm e consumiu %.2fLitros de combustivel", distancia, litrosGastos);
 
                 break;
+
             case 2:
                 System.out.print("""
                         Bem vindo ao Conversor de Temperatura
@@ -92,6 +93,7 @@ public class ExerciciosAplicadosEmSala {
                         break;
                 }
                 break;
+
             case 3:
 
                 System.out.println("Vamos calcular o volume do objeto me passe as medidas em metros");
@@ -102,6 +104,7 @@ public class ExerciciosAplicadosEmSala {
                 double volume = (3.14159 * ((raio * raio) * altura));
                 System.out.printf("o volume é igual a %.4fm³", volume);
                 break;
+
             case 4:
 
                 System.out.print("""
@@ -118,6 +121,7 @@ public class ExerciciosAplicadosEmSala {
                 System.out.println("prontinho os valores atribuídos foram invertidos");
                 System.out.printf("valor 1 = %d, valor 2 = %d ", valor1, valor2);
                 break;
+
             case 5:
 
                 System.out.print("""
@@ -158,6 +162,7 @@ public class ExerciciosAplicadosEmSala {
                         C com D = %d e %d respectivamente
                         """, valorC + valorD, valorC * valorD);
                 break;
+
             case 6:
 
                 System.out.print("Digite sua idade: ");
@@ -172,6 +177,7 @@ public class ExerciciosAplicadosEmSala {
                 }
                 scanner.close();
                 break;
+
             case 7:
 
                 System.out.print("Em que dia da semana estamos ");
@@ -210,6 +216,7 @@ public class ExerciciosAplicadosEmSala {
                     break;
                 }
                 break;
+
             case 8:
 
                 System.out.print("""
@@ -229,6 +236,7 @@ public class ExerciciosAplicadosEmSala {
                     System.out.println("Reprovado");
                 }
                 break;
+
             case 9:
 
                 //usuario e senha cadastrado por padrao: admin e 1234 respectivamente;
@@ -295,6 +303,7 @@ public class ExerciciosAplicadosEmSala {
 
                 }
                 break;
+
             case 10:
 
                 System.out.print("""
@@ -466,16 +475,26 @@ public class ExerciciosAplicadosEmSala {
                 System.out.print("Bem-vindo ao verificador de numeros primos");
                 System.out.print("Digite qual numero deseja verificar: ");
                 int numeroPrimo = scanner.nextInt();
-
-                int resto1 = numeroPrimo % 2;
-                int resto2 = numeroPrimo % 3;
-                int resto3 = numeroPrimo % 5;
-
-                if (resto1 != 0 && resto2 != 0 && resto3 != 0) {
-                    System.out.printf("%d é um numero primo", numeroPrimo);
-                }else {
-                    System.out.printf("%d não é um numero primo", numeroPrimo);
+                if (numeroPrimo <= 1) {
+                    System.out.printf("%d não é um número primo.", numeroPrimo);
+                } else {
+                    int i = 2;
+                    boolean Primo = true;
+                    while (i < numeroPrimo) {
+                        if (numeroPrimo % i == 0) {
+                            Primo = false;
+                            break;
+                        }
+                        i++;
+                    }
+                    if (Primo) {
+                        System.out.printf("%d é um número primo.", numeroPrimo);
+                    } else {
+                        System.out.printf("%d não é um número primo.", numeroPrimo);
+                    }
                 }
+
+                break;
 
             case 19:
 
@@ -488,7 +507,6 @@ public class ExerciciosAplicadosEmSala {
                 int termo2 = 1;
                 for (int i = 1; i < intervalo; i++){
                     int resultadoFibonacci = termo1 + termo2;
-
                     termo1 = termo2;
                     termo2 = resultadoFibonacci;
                     System.out.printf("""
@@ -609,6 +627,8 @@ public class ExerciciosAplicadosEmSala {
                 }
                 System.out.println("Encerrando");
                 break;
+
+            case 23:
 
 
             default:

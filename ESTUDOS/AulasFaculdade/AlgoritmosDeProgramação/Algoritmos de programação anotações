@@ -197,35 +197,111 @@ Teste de Mesa: Cumpom                       |             Fluxograma:
   3 | falso     36    verdadeiro            |
   4 |                                       |
                                             |
+                                            |
+algoritmo: AnoBissexto                                       |
+var: ano: inteiro                                            |
+                                                             |
+inicio                                                       |
+Escreva("qual ano deseja verificar")                         |
+leia (ano)                                                   |
+                                                             |
+se (ano mod 4 = 0) e (ano mod 100 != 0) ou (ano mod 400 = 0) |
+    Escreva("o ano é bissexto")                              |
+    senao                                                    |
+        Escreva("o ano não é bissexto")                      |
+fimse                                                        |
 
-                                            |               algoritmo: AnoBissexto
-                                            |               var: ano: inteiro
-                                            |
-                                            |               inicio
-                                            |               Escreva("qual ano deseja verificar")
-                                            |               leia (ano)
-                                            |
-                                            |               se (ano mod 4 = 0) e (ano mod 100 != 0) ou (ano mod 400 = 0)
-                                            |                   Escreva("o ano é bissexto")
-                                            |                   senao
-                                            |                       Escreva("o ano não é bissexto")
-                                            |               fimse
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
-                                            |
+
+--------------------------------------------------------------------------------------------------------------
+                                           AULA 09/09/2024
+algoritmo "soma"                            |
+var                                         | Teste de mesa
+soma, i: inteiro                            |    |   A   B
+
+Inicio                                      |----|-----------------------
+soma <- 0                                   |    |
+i<-1                                        |    |
+enquanto(i >= 100)faca                      |    |
+soma += i                                   |    |
+i <- i + 1                                  |    |
+fimenquanto                                 |    |
+escreva("a soma é ",soma)                   |    |
+fimalgoritmo                                |    |
+
+----------------------------------------------------------------------------------------------------------------
+
+algoritmo "tabuada"
+var
+resultado, numero, i: inteiro
+
+Inicio
+escreva("qual valor deseja saber a tabuada")
+leia (numero)
+enquanto(i < 10)faca
+resultado <- numero * i
+Escreva(i + "*" + numero + "=" + resultado)
+i <- i + 1
+fimenquanto
+
+-------------------------------------------------------------------------------------------------------------------
+
+algoritmo "somaDosPares"
+
+var
+resultado, soma, numero: inteiro
+
+Inicio
+i <- 1
+enquanto(i < 500)faca
+i <- i + 1
+se(i mod 2)entao
+Escreva(i)
+fimse
+
+fimenquanto
+
+------------------------------------------------------------------------------------------------------------------------
+                                          (ATIVIDADE VALENDO 3,0) 10/09/2024
+
+algoritmo "fibonacciOuPrimo"
+var
+fibonacci, opcao, valor, valorA, valorB, resto: inteiro
+primo: logico
+
+Inicio
+valorA <- 0
+valorB <- 1
+fibonacci <- 0
+resto <- 0
+escreva("Qual valor deseja verificar")
+leia (valor)
+escreva("Deseja verificar: 1 - Fibonacci, 2 - Numero Primo")
+leia (opcao)
+se(opcao = 1)entao
+    enquanto(valor <> fibonacci) e (valor < fibonacci)faca
+        fibonacci <- valorA + valorB
+        valorA <- valorB
+        valorB <- fibonacci
+    fimenquanto
+    se(valor = fibonacci)entao
+        escreva("o valor " + valor + "esta presente na sequencia de fibonacci")
+    senao
+        escreva("o valor não esta presente na sequencia de fibonacci")
+    fimse
+senao
+int i <- 2
+Primo <- verdadeiro
+enquanto (i < numeroPrimo)
+    se (numeroPrimo mod i = 0)
+        Primo <- falso
+    i <- i + 1
+    fimse
+fimenquanto
+se (Primo)entao
+    escreva(valor + " é um número primo.")
+senao
+    escreva(valor + " não é um número primo.")
+fimse
+fimse
+
+

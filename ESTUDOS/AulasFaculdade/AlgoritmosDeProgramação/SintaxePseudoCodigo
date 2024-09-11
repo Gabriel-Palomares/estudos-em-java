@@ -109,3 +109,12 @@ Função DobrarValor(valor)
 FimFunção
 
 Escreva "O dobro de 10 é ", DobrarValor(10)
+
+
+
+REPETIÇÃO
+enquanto(parametro)faca...fimenquanto;
+
+
+
+
