@@ -213,11 +213,10 @@ fimse                                                        |
 
 
 --------------------------------------------------------------------------------------------------------------
-                                           AULA 09/09/2024
-algoritmo "soma"                            |
-var                                         | Teste de mesa
-soma, i: inteiro                            |    |   A   B
-
+algoritmo "soma"                                          AULA 09/09/2024
+var                                         |
+soma, i: inteiro                            | Teste de mesa
+                                            |    |   A      B
 Inicio                                      |----|-----------------------
 soma <- 0                                   |    |
 i<-1                                        |    |
