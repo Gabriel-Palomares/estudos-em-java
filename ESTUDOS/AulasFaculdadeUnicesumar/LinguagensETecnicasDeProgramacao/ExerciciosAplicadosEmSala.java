@@ -35,6 +35,8 @@ public class ExerciciosAplicadosEmSala {
                 20 - PI (inacabado)
                 21 - Desconto em compra
                 22 - Teste Arrays
+                23 - BonusSalarial
+                24 -
                 """);
         int opcao = scanner.nextInt();
 
@@ -659,6 +661,24 @@ public class ExerciciosAplicadosEmSala {
                 }while (i <= 4);
                 System.out.println(somaDosBonus);
 
+                break;
+
+            case 24:
+
+                double resultadoDiv;
+                System.out.println("""
+                        Bem vindo ao verificador de divisões
+                        Insira até qual numero deseja verificar
+                        E tambem por qual numero (inteiro) o intervalo sera dividido
+                        """);
+                int ateOValor = scanner.nextInt();
+                int valorDaDivisao = scanner.nextInt();
+                for (int numeroDiv = 1; numeroDiv <= ateOValor; numeroDiv++){
+                    resultadoDiv = numeroDiv % valorDaDivisao;
+                    if (resultadoDiv == 0){
+                        System.out.printf("%d é divisivel por %d", numeroDiv, valorDaDivisao);
+                    }
+                }
                 break;
             default:
                 System.out.print("entrada invalida");
