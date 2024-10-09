@@ -116,5 +116,24 @@ REPETIÇÃO
 enquanto(parametro)faca...fimenquanto;
 
 
+FOR
+A estrutura "for" em pseudocódigo é usada para repetir um bloco de comandos um número
+específico de vezes. Aqui está a sintaxe básica:
 
+para i de início até fim passo incremento
+    // comandos a serem executados
+fim-para
+
+Vamos decompor isso:
+início: valor inicial da variável de controle i.
+fim: valor final da variável de controle i.
+incremento: valor pelo qual i será incrementado a cada iteração. Se omitido, o incremento padrão é 1.
+
+Exemplo prático:
+
+para i de 1 ate 10
+    escreva("Número: ", i)
+fim-para
+
+Neste exemplo acima, o programa vai escrever os números de 1 a 10. Simples, direto, e sem rodeios!
 

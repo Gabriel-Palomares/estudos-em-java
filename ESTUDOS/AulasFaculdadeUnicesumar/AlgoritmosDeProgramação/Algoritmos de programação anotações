@@ -304,3 +304,44 @@ fimse
 fimse
 
 
+----------------------------------------------------------------------------------------------------------------------------
+                                                 08/10/2024
+
+FOR
+Exercicio1:
+
+algoritmo "potenciaDeBase"
+var
+numero, potencia, resultado, i: inteiro
+
+inicio
+escreva("Insira o valor da base: ")
+leia(numero)
+escreva("insira a potencia: ")
+leia (potencia)
+para i de 1 ate potencia passo 1 faca
+    numero <- numero * numero
+        se base = 0 entao
+            escreva("resultado é 0")
+        senao potencia = 0 entao
+            escreva("resultado é 1")
+        fimse
+    escreva (numero)
+fimpara
+fimalgoritmo
+
+Exercicio2:
+
+algoritmo "divisiveisPor4"
+var
+i, resultado: inteiro
+
+inicio
+
+para i de 1 ate 199 passo 1 faca
+    resultado <- i mod 4
+        se (resultado = 0)
+            escreva(i)
+        fimse
+fimpara
+fimalgoritmo

@@ -630,7 +630,36 @@ public class ExerciciosAplicadosEmSala {
 
             case 23:
 
+                System.out.println("""
+                                    Parabens pela sua colaboração.
+                        Informe os dados solicitados para saber qual seu bonus.
+                        """);
+                int i = 1;
+                int anosDeContribuicao;
+                double salario;
+                double bonus;
+                double somaDosBonus = 0;
+                do {
+                    System.out.println("Quantos anos de contribuição você tem: ");
+                    anosDeContribuicao = scanner.nextInt();
+                    System.out.println("qual seu salário atual: ");
+                    salario = scanner.nextDouble();
 
+                    if (anosDeContribuicao >= 15){
+                        bonus = salario * 0.20;
+
+                    } else if (anosDeContribuicao >= 10) {
+                        bonus = salario * 0.25;
+                    }else {
+                        bonus = 500;
+                    }
+                    somaDosBonus += bonus;
+                    i++;
+
+                }while (i <= 4);
+                System.out.println(somaDosBonus);
+
+                break;
             default:
                 System.out.print("entrada invalida");
                 break;
