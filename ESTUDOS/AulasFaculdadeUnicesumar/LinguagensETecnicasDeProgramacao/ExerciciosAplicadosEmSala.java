@@ -669,10 +669,15 @@ public class ExerciciosAplicadosEmSala {
 
                 System.out.println("""
                         Bem Vindo ao verificador de divisão
-                        Selecione um intervalo de 1 até:
-                        Para ver se é divisivel por:
+                        Os numeros de um intervalo de 1 até 200 seram divididos por:
                         """);
-                    int ate = scanner.nextInt();
+                int quociente = scanner.nextInt();
+
+                for(int count = 1; count <= 200; count++) {
+                    if (count % quociente == 0) {
+                        System.out.println();
+                    }
+                }
 
 
                 break;
