@@ -7,8 +7,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Scanner;
 
+
 public class ExerciciosAplicadosEmSala {
     public static void main() {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("""
@@ -36,7 +38,7 @@ public class ExerciciosAplicadosEmSala {
                 21 - Desconto em compra
                 22 - Teste Arrays
                 23 - BonusSalarial
-                24 -
+                24 - Verificador de divisões
                 """);
         int opcao = scanner.nextInt();
 
@@ -665,28 +667,24 @@ public class ExerciciosAplicadosEmSala {
 
             case 24:
 
-                double resultadoDiv;
                 System.out.println("""
-                        Bem vindo ao verificador de divisões
-                        Insira até qual numero deseja verificar
-                        E tambem por qual numero (inteiro) o intervalo sera dividido
+                        Bem Vindo ao verificador de divisão
+                        Selecione um intervalo de 1 até:
+                        Para ver se é divisivel por:
                         """);
-                int ateOValor = scanner.nextInt();
-                int valorDaDivisao = scanner.nextInt();
-                for (int numeroDiv = 1; numeroDiv <= ateOValor; numeroDiv++){
-                    resultadoDiv = numeroDiv % valorDaDivisao;
-                    if (resultadoDiv == 0){
-                        System.out.printf("%d é divisivel por %d", numeroDiv, valorDaDivisao);
-                    }
-                }
+                    int ate = scanner.nextInt();
+
+
                 break;
+
+            case 25:
+
+
+
             default:
                 System.out.print("entrada invalida");
                 break;
         }
-
-
-
     }
 }
 
