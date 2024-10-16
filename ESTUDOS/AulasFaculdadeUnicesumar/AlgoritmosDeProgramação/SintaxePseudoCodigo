@@ -20,7 +20,7 @@ Exemplo:
 Escreva idade
 Escreva "Olá, " + nome
 
-
+------------------------------------------------------------------------------------------------------------------
 Estruturas Condicionais
 Se - Então - Senão
 Se condição Então
@@ -29,14 +29,13 @@ Senão
     // Código a ser executado se a condição for falsa
 FimSe
 Exemplo:
-plaintext
-Copiar código
+
 Se idade >= 18 Então
     Escreva "Maior de idade"
 Senão
     Escreva "Menor de idade"
 FimSe
-
+------------------------------------------------------------------------------------------------------------------
 
 Estruturas de Repetição
 Enquanto (Loop While)
@@ -48,19 +47,18 @@ Enquanto contador < 10 Faça
     Escreva contador
     contador ← contador + 1
 FimEnquanto
-
+----------------------------------------------------------------------------------------------------------------------
 
 Para (Loop For)
 Para i de início até fim Faça
     // Código a ser executado para cada valor de i
 FimPara
 Exemplo:
-plaintext
-Copiar código
+
 Para i de 1 até 10 Faça
     Escreva i
 FimPara
-
+----------------------------------------------------------------------------------------------------------------------
 
 Estrutura de Função ou Procedimento
 Função NomeDaFunção(parâmetros)
@@ -72,7 +70,7 @@ Função Soma(a, b)
     resultado ← a + b
     Retorne resultado
 FimFunção
-
+----------------------------------------------------------------------------------------------------------------------
 Operadores Lógicos PseudoCódigo e Fluxograma
               E (AND)           |    . e .
 Se (condição1 E condição2) Então
@@ -87,7 +85,7 @@ Maior que: >
 Menor que: <
 Maior ou igual a: >=
 Menor ou igual a: <=
-
+----------------------------------------------------------------------------------------------------------------------
 Exemplo Completo de Pseudocódigo
 variável idade ← 0
 
@@ -110,17 +108,17 @@ FimFunção
 
 Escreva "O dobro de 10 é ", DobrarValor(10)
 
-
+----------------------------------------------------------------------------------------------------------------------
 
 REPETIÇÃO
 enquanto(parametro)faca...fimenquanto;
 
-
+--------------------------------------------------------------------------------------------------------------
 FOR
 A estrutura "for" em pseudocódigo é usada para repetir um bloco de comandos um número
 específico de vezes. Aqui está a sintaxe básica:
 
-para i de início até fim passo incremento
+para i de início até fim passo (incremento)
     // comandos a serem executados
 fim-para
 
@@ -136,4 +134,15 @@ para i de 1 ate 10
 fim-para
 
 Neste exemplo acima, o programa vai escrever os números de 1 a 10. Simples, direto, e sem rodeios!
+-------------------------------------------------------------------------------------------------------------
 
+ARRAY
+
+Declaração de Array:
+array nomeArray[tamanho]
+
+Atribuição de Valores:
+nomeArray[indice] ← valor
+
+Leitura de Valores:
+valor ← nomeArray[indice]

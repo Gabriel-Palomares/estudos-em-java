@@ -686,6 +686,7 @@ public class ExerciciosAplicadosEmSala {
 
 
 
+
             default:
                 System.out.print("entrada invalida");
                 break;
