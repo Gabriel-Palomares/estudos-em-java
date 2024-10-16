@@ -674,8 +674,14 @@ public class ExerciciosAplicadosEmSala {
                 int quociente = scanner.nextInt();
 
                 for(int count = 1; count <= 200; count++) {
-                    if (count % quociente == 0) {
-                        System.out.println();
+                    if (count % quociente != 0) {
+                        System.out.printf("""
+                                %d não é divisivel por %d
+                                """, count, quociente);
+                    }else {
+                        System.out.printf("""
+                                %d é divisivel por %d
+                                """, count, quociente);
                     }
                 }
 

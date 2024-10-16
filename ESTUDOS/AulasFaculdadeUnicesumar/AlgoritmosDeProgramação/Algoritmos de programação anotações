@@ -422,3 +422,58 @@ fimpara
         escreva(b [i])
     fimpara
 fimalgoritmo
+
+--------------------------////////////////////////////
+
+algoritmo"eleiçãoSindico"
+
+var
+candidato, candidato1, candidato2, branco, nulos : inteiro
+votos vetor[] de inteiro
+count : inteiro
+opcao : caracter
+i : inteiro
+quantidade : inteiro
+porcentagem : real
+
+inicio
+(candidato, candidato1, candidato2, branco, nulos) <- 0
+count <- 1
+enquanto(candidato ≠ 5)faca
+    escreva("Insira o numero do candidato que deseja votar ou insira o numero 5 para abrir as opções")
+    leia (candidato)
+    votos <- candidato
+    count <- count + 1
+fimenquanto
+    escreva("Selecione a opção: a) O numero de votos de cada candidato b) A porcentagem de votos nulos
+    c) A porcentagem de votos em branco d) O candidato vencedor")
+        se(caracter = a)entao
+            para i de 1 ate count passo 1 faca
+                votos[i]
+                    se (votos[i] = 1)entao
+                        candidato1 <- candidato1 + 1
+                    senaose(votos[i] = 2)entao
+                        candidato2 <- candidato2 + 1
+                    senaose(votos[i] = 3)entao
+                        branco <- branco + 1
+                    senaose(votos[i] = 4)entao
+                        nulos <- nulos + 1
+                    fimse
+            fimpara
+        escreva("candidato1 teve ",candidato1, "votos, candidato2 teve", candidato2, "votos, candidato3 teve", candidato3,"votos, em nulos tiveram ",nulos, "votos"
+            senaose(caracter = b)entao
+                porcentagem <- (count / 100) * nulos
+                escreva("o percentual de votos nulos foi ", nulos)
+            senaose(caracter = c)entao
+                porcentagem <- (count / 100) * branco
+                escreva("o percentual de votos em branco foram ", branco)
+            senaose(caracter = d)entao
+                se (candidato1 > candidato2) entao
+                    escreva("candidato 1 é o vencedor")
+                senaose (candidato1 < candidato2)
+                    escreva("candidato 2 é o vencedor")
+                senao
+                    escreva("o resultado foi um empate")
+                fimse
+        fimse
+fimalgoritmo
