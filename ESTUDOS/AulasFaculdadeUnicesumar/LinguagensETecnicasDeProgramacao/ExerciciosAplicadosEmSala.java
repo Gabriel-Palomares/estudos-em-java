@@ -39,6 +39,8 @@ public class ExerciciosAplicadosEmSala {
                 22 - Teste Arrays
                 23 - BonusSalarial
                 24 - Verificador de divisões
+                25 - Eleição De Sindicos
+                26 - Subtração de duas Arrays
                 """);
         int opcao = scanner.nextInt();
 
@@ -685,13 +687,63 @@ public class ExerciciosAplicadosEmSala {
                     }
                 }
 
-
                 break;
 
             case 25:
 
+                int candidato, candidato1=0, candidato2=0, branco=0, nulos=0, count = 0, quantidade;
+                double porcentagem;
+                String option;
+                int [] votos = new int[count];
 
+                do {
+                    System.out.println("""
+                                       Insira o numero do candidato que deseja votar
+                                       1 - candidato 1
+                                       2 - candidato 2
+                                       3 - branco
+                                       4 - nulo
+                                       ou insira o numero 5 para abrir as opções
+                                       """);
+                    votos[count] = scanner.nextInt();
+                    count++;
+                }while (votos[count] != 5);
+                System.out.println("""
+                        Selecione a opção:
+                        a) O numero de votos de cada candidato
+                        b) A porcentagem de votos nulos
+                        c) A porcentagem de votos em branco
+                        d) O candidato vencedor
+                        """);
+                option = scanner.next();
 
+                if (Objects.equals(option, "a")){
+                    for (int x = 0;x <= count;x++){
+                        if (votos[x] == 1){
+                            candidato1 += 1;
+                        } else if (votos[x] == 2) {
+                            candidato2 += 1;
+                        } else if (votos[x] == 3) {
+                            branco += 1;
+                        } else if (votos[x] == 4) {
+                            nulos += 1;
+                        }
+                    }
+                    System.out.printf("candidato 1 teve %d votos, candidato 2 teve %d votos, %d brancos e %d nulos", candidato1, candidato2, branco, nulos);
+                } else if (Objects.equals(option, "b")) {
+                    
+                }
+
+                break;
+
+            case 26:
+
+              for (int x = 1;x < 30;x++){
+                  for (int ate = 1; ate > x; ate++){
+
+                  }
+              }
+                break;
 
             default:
                 System.out.print("entrada invalida");

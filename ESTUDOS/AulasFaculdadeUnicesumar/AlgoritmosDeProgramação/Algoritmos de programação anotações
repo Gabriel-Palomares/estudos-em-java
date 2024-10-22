@@ -442,12 +442,12 @@ count <- 1
 enquanto(candidato ≠ 5)faca
     escreva("Insira o numero do candidato que deseja votar ou insira o numero 5 para abrir as opções")
     leia (candidato)
-    votos <- candidato
+    votos [count]<- candidato
     count <- count + 1
 fimenquanto
     escreva("Selecione a opção: a) O numero de votos de cada candidato b) A porcentagem de votos nulos
     c) A porcentagem de votos em branco d) O candidato vencedor")
-        se(caracter = a)entao
+        se(caracter = 'a')entao
             para i de 1 ate count passo 1 faca
                 votos[i]
                     se (votos[i] = 1)entao
@@ -461,13 +461,13 @@ fimenquanto
                     fimse
             fimpara
         escreva("candidato1 teve ",candidato1, "votos, candidato2 teve", candidato2, "votos, candidato3 teve", candidato3,"votos, em nulos tiveram ",nulos, "votos"
-            senaose(caracter = b)entao
+            senaose(caracter = 'b')entao
                 porcentagem <- (count / 100) * nulos
-                escreva("o percentual de votos nulos foi ", nulos)
-            senaose(caracter = c)entao
+                escreva("o percentual de votos nulos foi de ", nulos, "%")
+            senaose(caracter = 'c')entao
                 porcentagem <- (count / 100) * branco
                 escreva("o percentual de votos em branco foram ", branco)
-            senaose(caracter = d)entao
+            senaose(caracter = 'd')entao
                 se (candidato1 > candidato2) entao
                     escreva("candidato 1 é o vencedor")
                 senaose (candidato1 < candidato2)
@@ -477,3 +477,61 @@ fimenquanto
                 fimse
         fimse
 fimalgoritmo
+
+--------------------------//////////////////////////////////
+
+algoritmo"viagem"
+
+var
+precoComDesconto, pagamento, destino, numeroDePessoas: inteiro
+array precos [4] <- 2000.00, 5000.00, 3000.00, 3500.00
+soma: real
+viagemPermitida: logico
+
+inicio
+
+repita
+    escreva("
+        Selecione qual o seu destino
+        1 - Rio De Janeiro R$ 2000,00
+        2 - Porto de Galinhas R$ 5000,00
+        3 - Gramado R$ 3000,00
+        4 - Rio Branco R$ 3500,00
+        ")
+    leia(destino)
+
+    escreva("quantas pessoas iram com você: ")
+    leia(numeroDePessoas)
+        se(numeroDePessoas <= 10) e (numeroDePessoas >= 1)entao
+            viagemPermitida = verdadeiro
+            senao
+                viagemPermitida = falso
+        fimse
+
+    preco <- precos[destino] * numeroDePessoas
+    escreva("o total foi de: ", preco)
+    escreva("
+            Qual a forma de pagamento
+            1 - pix
+            2 - dinheiro
+            3 - cartão
+            ")
+    leia(pagamento)
+    se(pagamento = 1) ou (pagamento = 2)entao
+         precoComDesconto <- preco - (preco * 0,1)
+         escreva("sua compra deu: ", precoComDesconto)
+         senao(pagamento = 3)
+            escreva("sua compra deu: ", preco)
+            senao
+                escreva("entrada invalida")
+    fimse
+
+ate(destino >= 1) e (destino <= 4) e (viagemPermitida = verdadeiro)
+
+fimalgoritmo
+
+
+
+
+
+
