@@ -9,8 +9,9 @@ public class AtividadePraNota {
         System.out.println("qual tamanho do seu vetor: ");
         int maxVetor = scanner.nextInt();
         int [] array = new int [maxVetor];
+        boolean escolha = false;
 
-        for (int i = 0; i <= maxVetor; i++){
+        for (int i = 0; i < maxVetor; i++){
             System.out.println("Quais os valores da sua array");
             array[i] = scanner.nextInt();
         }
@@ -21,21 +22,21 @@ public class AtividadePraNota {
                 """);
         int opcao = scanner.nextInt();
         if (opcao == 1){
-            boolean escolha = true;
+            escolha = true;
         } else if (opcao == 2) {
-            boolean escolha = false;
+            System.out.println(" ");
         }else {
             System.out.println("entrada invalida");
         }
-        
+        ordenador(array, escolha);
+        exibirvalor(array);
     }
 
-    public void exibirValor(int []array) {
+    static void exibirvalor(int []array) {
         for (int e = 0; e < array.length; e++){
             System.out.printf("na posição %d o valor é %d", e ,array[e]);
             System.out.println(" ");
         }
-        System.out.println();
     }
 
     public static void ordenador(int []array, boolean escolha) {

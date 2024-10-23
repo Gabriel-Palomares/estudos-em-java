@@ -530,7 +530,105 @@ ate(destino >= 1) e (destino <= 4) e (viagemPermitida = verdadeiro)
 
 fimalgoritmo
 
+------------------------------------------------------------------------------------------------------------------------
 
+funções
+
+algoritmo "calculadora"
+var
+opcao, i: inteiro
+array numeros [1..10] de inteiro
+resultado: real
+resultado <- 0
+
+procedimento Soma()
+    repita
+        i <- 1
+        escreva("
+            quais valores deseja somar (até 10 valores):
+            digite zero para parar de somar
+                ")
+        leia (numeros[i])
+        i <- i + 1
+    ate(numeros[i] = 0)
+    para x de 1 ate i passo 1 faca
+        resultado <- numeros[x] + resultado
+    fimpara
+
+retorna resultado
+fimprocedimento
+
+procedimento Subtracao()
+    repita
+        escreva("
+            quais valores deseja subtrair (até 10 valores):
+            digite zero para parar de subtrair
+                ")
+            leia (numeros[i])
+            i <- i + 1
+    ate(numeros[i] = 0)
+    para x de 1 ate i passo 1 faca
+            resultado <- numeros[x] - resultado
+    fimpara
+retorna resultado
+fimprocedimento
+
+procedimento Multiplicacao()
+    repita
+        escreva("
+            quais valores deseja multiplicar (até 10 valores):
+            digite zero para parar de multiplicar
+                ")
+            leia (numeros[i])
+            i <- i + 1
+    ate(numeros[i] = 0)
+    resultado <- 1
+    para x de 1 ate i passo 1 faca
+        resultado <- numeros[x] * resultado
+    fimpara
+fimprocedimento
+
+
+procedimento Divisao()
+    repita
+        escreva("
+            quais valores deseja dividir (até 10 valores):
+            digite zero para parar de dividir
+                ")
+            leia (numeros[i])
+            i <- i + 1
+    ate(numeros[i] = 0)
+    resultado <- 1
+    para x de 1 ate i passo 1 faca
+        resultado <- numeros[x] / resultado
+    fimpara
+retorna resultado
+fimprocedimento
+
+inicio
+
+escreva("qual operação você deseja fazer:
+        1 - soma
+        2 - subtração
+        3 - multiplicação
+        4 - divisão
+        ")
+leia (opcao)
+    se(opcao = 1)entao
+        soma()
+        escreva("o resultado da soma é = ", resultado)
+    senao(opcao = 2)
+        subtracao()
+        escreva("o resultado da subtracao é = ", resultado)
+    senao(opcao = 3)
+        multiplicacao()
+        escreva("o resultado da multiplicacao é = ", resultado)
+    senao(opcao = 4)
+        divisao()
+        escreva("o resultado da divisao é = ", resultado)
+    senao
+        escreva("entrada invalida")
+    fimse
 
 
 
