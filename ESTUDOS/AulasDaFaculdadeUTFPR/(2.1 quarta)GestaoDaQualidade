@@ -97,11 +97,32 @@ David A. GARVIN - 1979
 
 Gurus da Qualidade () -> Quadro resumo
 Era da Qualidade
-    ->Era da inspeção
-    ->Era do Controle
-    ->Era da Garantia
-    ->Era da Gestão da Qualidade (Excelência)
+    ->Era da inspeção: SHEWHART
+    ->Era do Controle: SHEWHART, JURAN, ISHIKAWA, DEMING, FEIGENBAUM
+    ->Era da Garantia: DEMING, JURAN, CROSBY, FEIGENBAUM, TAGUCHI
+    ->Era da Gestão da Qualidade (Excelência): ISHIKAWA, GARVIN
 
 Joseph M. Juran - 1951
     A abordagem de Juran possui um forte ingrediente gerencial e focaliza:
 
+
+////////////////////////////
+
+      Gurus                 Características                 Era
+    -SHEWHART   | -Introdução da estatistica em proce- | -Inspeção |
+                   ssos de garantia de qualidade       | -Controle |
+    -JURAN      | -   |
+
+    -ISHIKAWA   | -   |
+
+    -DEMING     | -   |
+
+    -FEIGENBAUM | -   |
+
+    -CROSBY     | -   |
+
+    -TAGUCHI    | -   |
+
+    -GRAVIN     | -   |
+
+------------------------------------------------------------------------------------------------------------------

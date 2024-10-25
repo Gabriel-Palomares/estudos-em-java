@@ -691,12 +691,13 @@ public class ExerciciosAplicadosEmSala {
 
             case 25:
 
-                int candidato, candidato1=0, candidato2=0, branco=0, nulos=0, count = 0, quantidade;
-                double porcentagem;
+                int candidato1=0, candidato2=0, branco=0, nulos=0, count = 0;
+
                 String option;
                 int [] votos = new int[count];
 
                 do {
+
                     System.out.println("""
                                        Insira o numero do candidato que deseja votar
                                        1 - candidato 1
@@ -706,8 +707,13 @@ public class ExerciciosAplicadosEmSala {
                                        ou insira o numero 5 para abrir as opções
                                        """);
                     votos[count] = scanner.nextInt();
+
+
+
+                    
                     count++;
                 }while (votos[count] != 5);
+                int total = votos.length;
                 System.out.println("""
                         Selecione a opção:
                         a) O numero de votos de cada candidato
@@ -716,6 +722,7 @@ public class ExerciciosAplicadosEmSala {
                         d) O candidato vencedor
                         """);
                 option = scanner.next();
+
 
                 if (Objects.equals(option, "a")){
                     for (int x = 0;x <= count;x++){
@@ -731,7 +738,25 @@ public class ExerciciosAplicadosEmSala {
                     }
                     System.out.printf("candidato 1 teve %d votos, candidato 2 teve %d votos, %d brancos e %d nulos", candidato1, candidato2, branco, nulos);
                 } else if (Objects.equals(option, "b")) {
-                    
+                    double totalNulos = (((double) total /100)*nulos);
+                    System.out.printf("""
+                Votos nulos representam um total %f
+                """, totalNulos);
+                }else if (Objects.equals(option, "c")) {
+                    double totalBrancos = (((double) total /100)*branco);
+                    System.out.printf("""
+                Votos brancos representam um total %f
+                """, totalBrancos);
+                }else if (Objects.equals(option, "d")) {
+                   if (candidato1 > candidato2){
+                       System.out.printf("""
+                               Candidato 1 é o vencedor com %d votos
+                               """, candidato1);
+                   }else {
+                       System.out.printf("""
+                               Candidato 2 é o vencedor com %d votos
+                               """, candidato2);
+                   }
                 }
 
                 break;
@@ -743,6 +768,28 @@ public class ExerciciosAplicadosEmSala {
 
                   }
               }
+                break;
+
+            case 27:
+
+                int p = 0;
+                int x = 0;
+                int [] numeros = new int[p];
+                do {
+
+                }while (numeros[x] > 0);
+
+                break;
+
+            case 28:
+
+                int cont = 0;
+                int [] notas = new int[cont];
+                for (cont = 0; cont < 4; cont++){
+                    System.out.println("Quais foram suas 4 notas do semestre: ");
+                    notas[cont] = scanner.nextInt();
+
+                }
                 break;
 
             default:

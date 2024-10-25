@@ -24,9 +24,10 @@ public class AtividadePraNota {
         if (opcao == 1){
             escolha = true;
         } else if (opcao == 2) {
-            System.out.println(" ");
+            escolha = false;
         }else {
             System.out.println("entrada invalida");
+
         }
         ordenador(array, escolha);
         exibirvalor(array);
@@ -60,7 +61,4 @@ public class AtividadePraNota {
 
         }
     }
-
-
-
 }
