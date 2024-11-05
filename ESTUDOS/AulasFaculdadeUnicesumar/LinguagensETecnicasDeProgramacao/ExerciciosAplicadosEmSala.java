@@ -529,7 +529,7 @@ public class ExerciciosAplicadosEmSala {
                         Até qual numero voce deseja obter de PI:
                         """);
 
-                
+
                 break;
 
             case 21:
@@ -765,23 +765,25 @@ public class ExerciciosAplicadosEmSala {
 
                 
 
-                break;
+                
 
             case 27:
 
 
-                break;
+
 
             case 28:
 
-                System.out.println("Quais foram suas 4 notas do semestre: ");
+                System.out.println("Quantas materias você teve no semestre");
+                int materias = scanner.nextInt();
+                System.out.printf("Quais foram suas %d notas do semestre: ", materias);
                 int [] notas = new int[i];
                 resultado = 0;
-                for (i = 0; i < 4; i++){
+                for (i = 0; i < materias; i++){
                     notas[i] = scanner.nextInt();
                     resultado += notas[i];
                 }
-                if ((resultado / 4) >= 6){
+                if ((resultado / materias) >= 6){
                     System.out.printf("Parabens você foi passou com %.1f pontos", (resultado / 4));
                 }else{
                     System.out.printf("você reprovou no semestre por %.1f pontos", (6-(resultado / 4)));
