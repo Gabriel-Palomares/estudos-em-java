@@ -682,3 +682,30 @@ leia(n)
 Fibonacci(n)
 
 fimalgoritmo
+
+-------------------///////////////////////
+
+algoritmo "ImparOuPar"
+
+var
+numero: inteiro
+
+procedimento ImparOuPar(numero: inteiro)
+    se(numero mod 2 = 0)entao
+        escreva("este numero é par")
+        senao
+            escreva("este numero é impar")
+    fimse
+fimprocedimento
+
+inicio
+
+escreva("Qual valor deseja verificar se é impar ou par")
+leia(numero)
+
+ImparOuPar(numero)
+
+fimalgoritmo
+
+------------------------------------------------------------------------------------------------------------------------
+

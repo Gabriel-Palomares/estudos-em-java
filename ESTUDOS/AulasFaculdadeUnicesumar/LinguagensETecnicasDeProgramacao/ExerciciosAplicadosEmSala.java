@@ -765,7 +765,7 @@ public class ExerciciosAplicadosEmSala {
 
                 
 
-                
+
 
             case 27:
 
@@ -784,9 +784,9 @@ public class ExerciciosAplicadosEmSala {
                     resultado += notas[i];
                 }
                 if ((resultado / materias) >= 6){
-                    System.out.printf("Parabens você foi passou com %.1f pontos", (resultado / 4));
+                    System.out.printf("Parabens você foi passou com %.1f pontos", (resultado / materias));
                 }else{
-                    System.out.printf("você reprovou no semestre por %.1f pontos", (6-(resultado / 4)));
+                    System.out.printf("você reprovou no semestre por %.1f pontos", (6-(resultado / materias)));
                 }
                 break;
 
