@@ -708,6 +708,7 @@ ImparOuPar(numero)
 fimalgoritmo
 
 ------------------------------------------------------------------------------------------------------------------------
+                                                05/11/2024
 
 algoritmo "CalculoDaDiagonal"
 
@@ -717,9 +718,11 @@ L1, D1, a, b, c: real
 
 funcao L(a,b: real): real
     retorne (raiz(a^2+b^2))
+fimfuncao
 
 funcao D(L1,c: real):real
     retorne (raiz(L^2+c^2))
+fimfuncao
 
 Inicio
 
@@ -730,3 +733,50 @@ L1 <- L(a,b)
 D1 <- D(L1,c)
 
 escreva(D1)
+
+---------------------///////////////////////
+
+algoritmo "ValorQuadrado"
+
+var
+valor, resultado: real
+
+funcao Quadrado(valor)
+    retorne valor * valor
+fimfuncao
+
+inicio
+
+Escreva("Qual valor deseja saber o quadrado")
+leia(valor)
+
+resultado <- Quadrado(valor)
+
+escreva(resultado)
+
+fimalgoritmo
+
+---------------------///////////////////////
+
+algoritmo "AtrasoDaPrestação"
+
+var
+prest, valor, taxa: real
+tempo: inteiro
+
+funcao taxinha(valor, taxa, tempo)
+    retorna valor+(valor*(taxa/100)*tempo
+fimfuncao
+
+inicio
+taxa <- 9
+escreva("Quantos dias voce atrasou sua conta e qual valor da sua conta")
+leia (tempo, valor)
+
+prest <- taxinha(valor, tempo, taxa)
+
+escreva("sua conta com a taxa de atraso deu: ", prest)
+
+fimalgoritmo
+
+-----------------------////////////////////////
