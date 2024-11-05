@@ -12,6 +12,8 @@ public class ExerciciosAplicadosEmSala {
     public static void main() {
 
         Scanner scanner = new Scanner(System.in);
+        int i = 0;
+        double resultado;
 
         System.out.println("""
                 qual exercicio você deseja resolver:
@@ -418,7 +420,7 @@ public class ExerciciosAplicadosEmSala {
                 int numFatorial = scanner.nextInt();
                 int fatorial = 1;
 
-                for (int i = 1; i <= numFatorial; i++){
+                for (i = 1; i <= numFatorial; i++){
                     fatorial *= i;
                 }
                 System.out.printf("fatorial de %d é igual a %d",numFatorial, fatorial );
@@ -454,7 +456,7 @@ public class ExerciciosAplicadosEmSala {
                 double numeroPotencia = scanner.nextInt();
                 System.out.printf("o numero %.0f sera elevado a qual portencia: ", numeroPotencia);
                 double potencia = scanner.nextInt();
-                double resultado = numeroPotencia;
+                resultado = numeroPotencia;
                 double resultadoUm = 1;
 
                 if (potencia == 0){
@@ -462,13 +464,13 @@ public class ExerciciosAplicadosEmSala {
                     break;
 
                 } else if (potencia > 0){
-                    for (int i = 1; i < potencia; i++){
+                    for (i = 1; i < potencia; i++){
                         resultado *= numeroPotencia;
                     }
                     System.out.printf("%.0f elevado a %.0f é igual a %.0f ", numeroPotencia, potencia, resultado);
                     break;
                 }else{
-                        for (int i = -1; i > potencia; i--){
+                        for (i = -1; i > potencia; i--){
                            resultado *= numeroPotencia;
                         }
                         resultadoUm /= resultado;
@@ -484,7 +486,7 @@ public class ExerciciosAplicadosEmSala {
                 if (numeroPrimo <= 1) {
                     System.out.printf("%d não é um número primo.", numeroPrimo);
                 } else {
-                    int i = 2;
+                    i = 2;
                     boolean Primo = true;
                     while (i < numeroPrimo) {
                         if (numeroPrimo % i == 0) {
@@ -506,12 +508,12 @@ public class ExerciciosAplicadosEmSala {
 
                 System.out.println("""
                         vamos iniciar
-                        qual intervalo voce deseja fazer de fibonacci
+                        Até qual posição de fibonacci voce deseja saber:
                         """);
                 int intervalo = scanner.nextInt();
                 int termo1 = 0;
                 int termo2 = 1;
-                for (int i = 1; i < intervalo; i++){
+                for (i = 1; i <= intervalo; i++){
                     int resultadoFibonacci = termo1 + termo2;
                     termo1 = termo2;
                     termo2 = resultadoFibonacci;
@@ -527,9 +529,7 @@ public class ExerciciosAplicadosEmSala {
                         Até qual numero voce deseja obter de PI:
                         """);
 
-                for (float n = 1; n <= 16; n++){
-                    System.out.println(1 / n);
-                }
+                
                 break;
 
             case 21:
@@ -580,14 +580,14 @@ public class ExerciciosAplicadosEmSala {
                         int tamanhoArray = scanner.nextInt();
                         String [] nomes = new String[tamanhoArray];
 
-                        for (int i = 0; i < nomes.length; i++){
+                        for (i = 0; i < nomes.length; i++){
                             System.out.printf("""
                                     Insira os itens da sua array. Já foram guardados %d itens
                                     """, i);
                             nomes [i] = scanner.nextLine();
                         }
                         System.out.println("Os itens da lista são: ");
-                        int i = 0;
+                        i = 0;
                         while (i < nomes.length) {
                             System.out.println(nomes[i]);
                             i++;
@@ -598,14 +598,14 @@ public class ExerciciosAplicadosEmSala {
                         int tamanhoArray = scanner.nextInt();
                         int [] numeros = new int[tamanhoArray];
 
-                        for (int i = 0; i < numeros.length; i++){
+                        for (i = 0; i < numeros.length; i++){
                             System.out.printf("""
                                     Insira os itens da sua array. Já foram guardados %d itens
                                     """, i);
                             numeros [i] = scanner.nextInt();
                         }
                         System.out.println("Os itens da lista são: ");
-                        int i = 0;
+                        i = 0;
                         while (i < numeros.length) {
                             System.out.println(numeros[i]);
                             i++;
@@ -616,14 +616,14 @@ public class ExerciciosAplicadosEmSala {
                         int tamanhoArray = scanner.nextInt();
                         double [] numeros = new double[tamanhoArray];
 
-                        for (int i = 0; i < numeros.length; i++){
+                        for (i = 0; i < numeros.length; i++){
                             System.out.printf("""
                                     Insira os itens da sua array. Já foram guardados %d itens
                                     """, i);
                             numeros [i] = scanner.nextDouble();
                         }
                         System.out.println("Os itens da lista são: ");
-                        int i = 0;
+                        i = 0;
                         while (i < numeros.length) {
                             System.out.println(numeros[i]);
                             i++;
@@ -640,7 +640,7 @@ public class ExerciciosAplicadosEmSala {
                                     Parabens pela sua colaboração.
                         Informe os dados solicitados para saber qual seu bonus.
                         """);
-                int i = 1;
+                i = 1;
                 int anosDeContribuicao;
                 double salario;
                 double bonus;
@@ -675,15 +675,15 @@ public class ExerciciosAplicadosEmSala {
                         """);
                 int quociente = scanner.nextInt();
 
-                for(int count = 1; count <= 200; count++) {
-                    if (count % quociente != 0) {
+                for(i = 1; i <= 200; i++) {
+                    if (i % quociente != 0) {
                         System.out.printf("""
                                 %d não é divisivel por %d
-                                """, count, quociente);
+                                """, i, quociente);
                     }else {
                         System.out.printf("""
                                 %d é divisivel por %d
-                                """, count, quociente);
+                                """, i, quociente);
                     }
                 }
 
@@ -691,10 +691,10 @@ public class ExerciciosAplicadosEmSala {
 
             case 25:
 
-                int candidato1=0, candidato2=0, branco=0, nulos=0, count = 0;
+                int candidato1=0, candidato2=0, branco=0, nulos=0;
 
                 String option;
-                int [] votos = new int[count];
+                int [] votos = new int[i];
 
                 do {
 
@@ -706,13 +706,13 @@ public class ExerciciosAplicadosEmSala {
                                        4 - nulo
                                        ou insira o numero 5 para abrir as opções
                                        """);
-                    votos[count] = scanner.nextInt();
+                    votos[i] = scanner.nextInt();
 
 
 
                     
-                    count++;
-                }while (votos[count] != 5);
+                    i++;
+                }while (votos[i] != 5);
                 int total = votos.length;
                 System.out.println("""
                         Selecione a opção:
@@ -725,7 +725,7 @@ public class ExerciciosAplicadosEmSala {
 
 
                 if (Objects.equals(option, "a")){
-                    for (int x = 0;x <= count;x++){
+                    for (int x = 0;x <= i;x++){
                         if (votos[x] == 1){
                             candidato1 += 1;
                         } else if (votos[x] == 2) {
@@ -763,32 +763,28 @@ public class ExerciciosAplicadosEmSala {
 
             case 26:
 
-              for (int x = 1;x < 30;x++){
-                  for (int ate = 1; ate > x; ate++){
+                
 
-                  }
-              }
                 break;
 
             case 27:
 
-                int p = 0;
-                int x = 0;
-                int [] numeros = new int[p];
-                do {
-
-                }while (numeros[x] > 0);
 
                 break;
 
             case 28:
 
-                int cont = 0;
-                int [] notas = new int[cont];
-                for (cont = 0; cont < 4; cont++){
-                    System.out.println("Quais foram suas 4 notas do semestre: ");
-                    notas[cont] = scanner.nextInt();
-
+                System.out.println("Quais foram suas 4 notas do semestre: ");
+                int [] notas = new int[i];
+                resultado = 0;
+                for (i = 0; i < 4; i++){
+                    notas[i] = scanner.nextInt();
+                    resultado += notas[i];
+                }
+                if ((resultado / 4) >= 6){
+                    System.out.printf("Parabens você foi passou com %.1f pontos", (resultado / 4));
+                }else{
+                    System.out.printf("você reprovou no semestre por %.1f pontos", (6-(resultado / 4)));
                 }
                 break;
 

@@ -630,6 +630,55 @@ leia (opcao)
         escreva("entrada invalida")
     fimse
 
+-----------------------------------------------------------------------------------------------------------------------
+                                                   04/11/2024
+
+algoritmo "somadorDeNValores"
+
+var
+i, soma: inteiro
+
+Procedimento Somador(n: inteiro)
+    soma <- 0
+        para i de 1 ate n passo 1
+            soma <- soma + i
+    fimpara
+    escreva("o resultado da soma é: ", soma)
+fimprocedimento
+
+Início
+
+escreva("Qual sera o valor de n para somar: ")
+leia(n)
+
+Somador(n)
+
+fimalgoritmo
+
+----------------------////////////////////////////
+
+algoritmo "FibonacciNTermos"
+
+var
+resultadoFibonacci, i, termo1, termo2: inteiro
 
 
+Procedimento Fibonacci(n: inteiro)
+termo1 <- 0
+termo2 <- 1
+    para i de 1 ate n passo 1
+        resultadoFibonacci <- termo1 + termo2
+        termo1 <- termo2
+        termo2 <- resultadoFibonacci
+        escreva(i, "º posição vale", resultadoFibonacci)
+    fimpara
+fimprocedimento
 
+Inicio
+
+escreva("Até qual posição você deseja saber da sequencia de fibonacci")
+leia(n)
+
+Fibonacci(n)
+
+fimalgoritmo
