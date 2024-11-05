@@ -709,3 +709,24 @@ fimalgoritmo
 
 ------------------------------------------------------------------------------------------------------------------------
 
+algoritmo "CalculoDaDiagonal"
+
+var
+L1, D1, a, b, c: real
+
+
+funcao L(a,b: real): real
+    retorne (raiz(a^2+b^2))
+
+funcao D(L1,c: real):real
+    retorne (raiz(L^2+c^2))
+
+Inicio
+
+Escreva("Insira os valores de A, B e C")
+leia(a,b,c)
+
+L1 <- L(a,b)
+D1 <- D(L1,c)
+
+escreva(D1)
