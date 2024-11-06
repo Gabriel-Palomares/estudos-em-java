@@ -741,7 +741,7 @@ algoritmo "ValorQuadrado"
 var
 valor, resultado: real
 
-funcao Quadrado(valor)
+funcao Quadrado(valor: real)
     retorne valor * valor
 fimfuncao
 
@@ -764,7 +764,7 @@ var
 prest, valor, taxa: real
 tempo: inteiro
 
-funcao taxinha(valor, taxa, tempo)
+funcao taxinha(valor, taxa, tempo: real)
     retorna valor+(valor*(taxa/100)*tempo
 fimfuncao
 
