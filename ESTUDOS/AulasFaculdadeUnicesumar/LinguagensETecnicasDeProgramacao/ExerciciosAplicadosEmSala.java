@@ -43,6 +43,7 @@ public class ExerciciosAplicadosEmSala {
                 24 - Verificador de divisões
                 25 - Eleição De Sindicos
                 26 - Subtração de duas Arrays
+                27 - Calculadora totalmente funcional kkkk
                 """);
         int opcao = scanner.nextInt();
 
@@ -772,6 +773,8 @@ public class ExerciciosAplicadosEmSala {
 
 
 
+
+
             case 28:
 
                 System.out.println("Quantas materias você teve no semestre");
@@ -795,5 +798,6 @@ public class ExerciciosAplicadosEmSala {
                 break;
         }
     }
+
 }
 
