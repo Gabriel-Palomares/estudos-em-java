@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CalculadoraFuncional {
 
-    public static void main(String[] args) {
+    public static void main() {
         int menu = exibirMenu();
 
         switch (menu){
@@ -58,16 +58,21 @@ public class CalculadoraFuncional {
                 """);
         double x = scanner.nextDouble();
         double y = scanner.nextDouble();
-        double resultado = x + y;
+
         try {
+            double resultado = x + y;
             while (x != 0 || y != 0){
-                System.out.printf("A soma deu = %.1f Qual sua proxima soma passe os 2 valores: ", resultado);
-                x = scanner.nextDouble();
-                y = scanner.nextDouble();
-                resultado = 0;
-                resultado = x + y;
+                try {
+                    System.out.printf("A soma deu = %.1f Qual sua proxima soma passe os 2 valores: ", resultado);
+                    x = scanner.nextDouble();
+                    y = scanner.nextDouble();
+                    resultado = 0;
+                    resultado = x + y;
+                }catch (ArithmeticException e){
+                    somar();
+                }
             }
-        }catch (ArithmeticException){
+        }catch (ArithmeticException e){
             somar();
         }
         exibirMenu();
@@ -81,22 +86,25 @@ public class CalculadoraFuncional {
                 """);
         double x = scanner.nextDouble();
         double y = scanner.nextDouble();
-        double resultado = x - y;
-        try {
-            while (x != 0 || y != 0){
-                System.out.printf("A subtração deu = %.1f Qual sua proxima subtração passe os 2 valores: ", resultado);
-                x = scanner.nextDouble();
-                y = scanner.nextDouble();
-                resultado = 0;
-                resultado = x - y;
+            try {
+                double resultado = x - y;
+                while (x != 0 || y != 0) {
+                    try {
+                        System.out.printf("A subtração deu = %.1f Qual sua proxima subtração passe os 2 valores: ", resultado);
+                        x = scanner.nextDouble();
+                        y = scanner.nextDouble();
+                        resultado = 0;
+                        resultado = x - y;
+                    } catch (ArithmeticException e) {
+                        subtrair();
+                    }
+                }
+            } catch (ArithmeticException e) {
+                exibirMenu();
             }
-        }catch (ArithmeticException){
-            subtrair();
-        }
-        exibirMenu();
     }
 
-    public static void dividir(){
+    public static void dividir() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Quais valores deseja somar:
@@ -104,19 +112,23 @@ public class CalculadoraFuncional {
                 """);
         double x = scanner.nextDouble();
         double y = scanner.nextDouble();
-        double resultado = x / y;
+
         try {
-            while (x != 0 || y != 0){
-                System.out.printf("A soma deu = %.1f Qual sua proxima soma passe os 2 valores: ", resultado);
-                x = scanner.nextDouble();
-                y = scanner.nextDouble();
-                resultado = 0;
-                resultado = x / y;
+            double resultado = x / y;
+            while (x != 0 || y != 0) {
+                try {
+                    System.out.printf("A soma deu = %.1f Qual sua proxima soma passe os 2 valores: ", resultado);
+                    x = scanner.nextDouble();
+                    y = scanner.nextDouble();
+                    resultado = 0;
+                    resultado = x / y;
+                } catch (ArithmeticException e) {
+                    dividir();
+                }
             }
-        }catch (ArithmeticException){
-            dividir();
+        }catch (ArithmeticException e){
+            exibirMenu();
         }
-        exibirMenu();
     }
 
     public static void multiplicar(){
@@ -127,19 +139,23 @@ public class CalculadoraFuncional {
                 """);
         double x = scanner.nextDouble();
         double y = scanner.nextDouble();
-        double resultado = x * y;
+
         try {
+            double resultado = x * y;
             while (x != 0 || y != 0){
-                System.out.printf("A multiplicação deu = %.1f Qual sua proxima  passe os 2 valores: ", resultado);
-                x = scanner.nextDouble();
-                y = scanner.nextDouble();
-                resultado = 0;
-                resultado = x * y;
+                try {
+                    System.out.printf("A multiplicação deu = %.1f Qual sua proxima  passe os 2 valores: ", resultado);
+                    x = scanner.nextDouble();
+                    y = scanner.nextDouble();
+                    resultado = 0;
+                    resultado = x * y;
+                }catch (ArithmeticException e){
+                    multiplicar();
+                }
             }
-        }catch (ArithmeticException){
+        }catch (ArithmeticException e){
             multiplicar();
         }
         exibirMenu();
     }
-
 }

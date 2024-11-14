@@ -43,7 +43,9 @@ public class ExerciciosAplicadosEmSala {
                 24 - Verificador de divisões
                 25 - Eleição De Sindicos
                 26 - Subtração de duas Arrays
-                27 - Calculadora totalmente funcional kkkk
+                27 - Contador em matriz
+                28 - Resultado semestral com arrays
+                29 -
                 """);
         int opcao = scanner.nextInt();
 
@@ -764,14 +766,29 @@ public class ExerciciosAplicadosEmSala {
 
             case 26:
 
+
                 
 
 
 
             case 27:
 
+                System.out.println("Quais são as dimensões da sua matriz (linha x coluna)");
+                int linha = scanner.nextInt();
+                int coluna = scanner.nextInt();
+                int valorDaCelula = 1;
+                int j;
+                int [][] matriz = new int[linha][coluna];
+                for (j = 0; j < linha; j++){
+                    for (i = 0; i < coluna; i++){
+                        matriz[j][i] = valorDaCelula;
+                        System.out.printf("%d ", (matriz[j][i]));
+                        valorDaCelula++;
+                    }
+                    System.out.println(" ");
+                }
 
-
+                break;
 
 
 

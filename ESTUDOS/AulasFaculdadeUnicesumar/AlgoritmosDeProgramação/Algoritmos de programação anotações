@@ -779,4 +779,144 @@ escreva("sua conta com a taxa de atraso deu: ", prest)
 
 fimalgoritmo
 
------------------------////////////////////////
+------------------------------------------------------------------------------------------------------------------------
+
+algoritmo "calculoMediaEContagem"
+
+var
+i, pares, numeroDePares: inteiro
+vet: vetor [5], resultadoMedia : real
+
+funcao Media(vet: vetor[1..5] de inteiro): real
+inicio
+resultadoMedia <- 0
+    para i de 1 ate 5 passo1 faca
+        resultadoMedia <- resultadoMedia + vet[i]
+    fimpara
+    retorne resultadoMedia / 5
+fimfuncao
+
+funcao Pares(vet: vetor[1..5]): real
+inicio
+pares <- 0
+    para i de 1 ate 5 passo1 faca
+        se(vetor[i] mod 2 = 0)
+            pares + 1
+        senao
+        fimse
+    fimpara
+    retorne pares
+fimfuncao
+
+
+
+inicio
+
+para i de 1 ate 5 passo 1
+    escreva("Quais são os valores do vetor: ")
+    leia(vetor[i])
+fimpara
+    escreva("a media resulta em: " + resultadoMedia()
+    escreva("e possui " + Pares() + " numeros pares")
+
+fimalgoritmo
+
+--------------------------////////////////////////
+
+algoritmo "calcularAreas"
+
+var
+opcao: inteiro
+altura, base, area, raio: real
+
+Procedimento retangulo(base, altura: real): real
+inicio
+    escreva("A area do seu retangulo é: " + (base * altura))
+fimprocedimento
+
+Procedimento triangulo(base, altura)
+inicio
+    escreva("A area do seu triangulo é: " + ((base * altura) / 2))
+fimprocedimento
+
+Procedimento circulo(raio: real)
+inicio
+    escreva("A area do seu circulo é: " + ((3.14 * (raio * raio)))
+fimprocedimento
+
+inicio
+
+escreva("o que voce deseja calcular. 1 - retangulo, 2 - triangulo, 3 - circulo. Selecione o numero")
+leia(opcao)
+se(opcao = 1)entao
+    escreva("Quais as dimensões do seu retangulo. Base e Altura")
+        leia(base, altura)
+        retangulo(base, altura: real)
+    senao(opcao = 2)entao
+        escreva("Quais as dimensões do seu triangulo. Base e Altura")
+        leia(base, altura)
+        triangulo(base, altura: real)
+
+    senao(opcao = 3)entao
+        escreva("Quais as dimensões do seu circulo. raio")
+                leia(raio)
+                circulo(raio: real)
+fimse
+
+fimalgoritmo
+
+------------------------------------------------------------------------------------------------------------------------
+
+Atividade para nota 2                                  12/11/2024
+
+algoritmo "verificarTriangulo"
+
+var
+x, y, z
+
+Funcao tipoDeTriangulo(x, y, z: real): caracter
+inicio/
+         se (x = y) e (y = z)entao
+             retorne"Esse é um triangulo equilátero"
+         senaose (x = y) e (y != z) ou (y = z) e (z != x) ou (x = z) e (z != y)
+             retorne"Este triangulo é o Isóceles"
+         senao
+             retorne"Esse triangulo é o Escaleno"
+         fimse
+    fimse
+fimfuncao
+
+Procedimento verificarComprimento(x, y, z: real)
+incio
+    se (x < y + z) e (y < x + z) e (z < x + y) entao
+        escreva(tipoDeTriangulo(x, y, z: real))
+    senao
+        escreva("O triangulo não pode ter lados valendo 0 ou menos")
+    fimse
+fimprocedimento
+
+inicio
+escreva("Quais as medidas x, y, z do triangulo")
+leia(x,y,z)
+
+verificarComprimento(x, y, z: real)
+
+fimalgoritmo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
