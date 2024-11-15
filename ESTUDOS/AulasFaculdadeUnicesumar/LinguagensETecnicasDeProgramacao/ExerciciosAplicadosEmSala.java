@@ -307,7 +307,7 @@ public class ExerciciosAplicadosEmSala {
                             *                              *
                             *        Área de Login         *
                             *         Login Falhou         *
-                            *      Usuario Inexistente     *
+                            *      Cliente Inexistente     *
                             *                              *
                             ********************************
                             """);
@@ -797,6 +797,7 @@ public class ExerciciosAplicadosEmSala {
                 System.out.println("Quantas materias você teve no semestre");
                 int materias = scanner.nextInt();
                 System.out.printf("Quais foram suas %d notas do semestre: ", materias);
+                
                 int [] notas = new int[i];
                 resultado = 0;
                 for (i = 0; i < materias; i++){
