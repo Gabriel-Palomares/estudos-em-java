@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    color: white;
+
+}
+.lista{
+    display: flex;
+    gap: 1em;
+}
+.item{
+    width: 250px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+img{
+
+
+}
+p{
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    opacity: 0;
+}
+.item:hover{
+    transform: scale(1.05);
+}
+.item:hover p{
+    opacity: 1;
+    top: 50%;
+}
+.lista:hover .item:not(:hover){
+    filter: blur(5px);
+}
+button{
+    
+}
