@@ -10,36 +10,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label for="checkbox" class="label"> </label>
+        <span id="theme-label">Modo Escuro</span>
+      </div>
     <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#educação">Educação</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#interesses">Interesses</a></li>
-            <li><a href="#favoritos">Sites Favoritos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+        <div class="nav">
+            <a href="#sobre">Sobre</a>  
+            <a href="#educação">Educação</a>    
+            <a href="#hobbies">Hobbies</a>  
+            <a href="#interesses">Interesses</a>    
+            <a href="#favoritos">Sites Favoritos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </div>
     </nav>
 
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>...</p>
+        <p>Olá, bem-vindo ao meu "site apresentação" nome é Gabriel Fernando, sou natural de Mongaguá-SP e tenho 21 anos. </p>
     </section> 
 
     <section id="educação">
         <h2>Educação</h2>
-        <p>...</p>
+        <p>Sou estudante de Engenharia de Software pela Unicesumar e estudante de Engenharia Elétrica pela UTFPR. Iniciei Elétrica após a pandemia, de alguns semestres pra cá cada vez menos me sentia interessado pelo curso e foi ai que decidi iniciar uma outra graduação no contraturno em Engenharia de Software. Confesso que não esperava que fosse gostar tanto e atualmente estou em busca de aprofundar meus conhecimentos para decidir qual caminho seguir e me especializar</p>
     </section>
 
     <section id="hobbies">
         <h2>Hobbies</h2>
-        <p>...</p>
+        <p>Nos dias atuais não tenho muitos hobbies gosto de assistir filmes/animes, ouvir musica e jogar com amigos. Já tive minha época de esportes e de musico mas atualmente bem pouco ativo. Gosto sempre de experimentar de tudo um pouco o que me levou a praticar diversos esportes e a aprender muitos instrumentos durante minha vida, sou percussionista, cantor e toco violoncelo além de outros instrumentos num nivel mais amador como violão, violino e piano. Um dos meus hobbies atuais que mais pratico atualmente é o de estudar, confesso que nunca fui muito fã mas recentemente ando conseguindo me divertir bastante aprendendo sobre programação e a area de desenvolvimento.</p>
     </section>
 
     <section id="interesses">
         <h2>Interesses</h2>
-        <p>...</p>
+        <p>De uma forma bem resumida gosto de tecnologia e coisas novas/diferentes, gosto de saber como as coisas funcionam e gosto de tentar faze-las funcionar do meu jeito, as vezes só seguir o manual não é o caminho mais divertido a se seguir. Profissionalmente falando ainda não tenho uma visão clara de quais são meus interesses sempre pensei em algo como desenvolvimento de ambientes em RA / RV (realidade aumentada e realidade virtual) ou IA (machine learning) mas imagino que parte da curiosidade seja o fato de não ter ideia de como algumas dessas coisas funcionam. Gosto de problemas de lógica e de pensar em problemas pra tentar antecipar eles.</p>
     </section>
 
     <section id="favoritos">
@@ -92,19 +97,50 @@
 
     <section id="habilidades">
         <h2>Habilidades</h2>
-        <p>...</p>
+        <p>Gosto de ensinar, principalmente quando tenho um certo dominio do que quero discutir geralmente me dou muito bem neste papel, sou uma pessoa que aprende relativamente rápido as coisas e sou bem proativo para tarefas e responsabilidades, trabalho bem em grupos desde que exista um nivel razoavel de comunicação e sou bem organizado.</p>
     </section>
 
     <section id="contato">
-        <h2>Contato</h2>
-        <ul>
-            <li><a href="https://www.instagram.com/gabriel_palomares17" target="_blank"><button>Instagram</button></a></li>
-            <li><a href="https://discordapp.com/users/gatocypher" target="_blank"><button>Discord</button></a></li>
-            <li><a href="mailto:gui.ferg.13@gmail.com " target="_blank"><button>Email</button></a></li>
-            <li><a href="https://wa.me/5513991442744" target="_blank"><button>WhatsApp</button></a></li>
-        </ul>
+        <h2>Contato</h2>    
+        <div class="contatos">   
+            <a href="https://www.instagram.com/gabriel_palomares17" target="_blank"> <img src="imagens/instagram.jpg" alt="followMeInstagram" width="160" weight="70"></a></li>
+            <a href="https://discordapp.com/users/gatocypher" target="_blank"> <img src="imagens/Discord-Button.png" alt="joinTheDiscord" width="140" weight="70"></a></li>
+            <a href="mailto:gui.ferg.13@gmail.com " target="_blank"><img src="imagens/sendEmail.png" alt="sendEmailbutton" width="180" weight="70"></a></li>
+            <a href="https://wa.me/5513991442744" target="_blank"><img src="imagens/whatsapp.png" alt="whatsapp" width="160" weight="70"></a></li>
+        </div>     
         <p></p>
     </section>
 
 </body>
+
+<script>
+    ///transição suave ao clicar em intens ancora
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+    
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+
+document.getElementById('checkbox').addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+    document.getElementById('theme-label').innerText = 'Modo Escuro';
+  } else {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    document.getElementById('theme-label').innerText = 'Modo Claro';
+  }
+});
+
+// Define o tema inicial
+document.body.classList.add('dark-mode');
+
+    </script>
+        
 </html>
