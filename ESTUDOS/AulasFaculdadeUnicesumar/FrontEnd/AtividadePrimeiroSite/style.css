@@ -1,200 +1,236 @@
-body {
-    transition: background-color 0.5s, color 0.5s;
-  }
-  
-  body.light-mode {
-    background: linear-gradient(to bottom, rgb(49, 102, 194), pink) ;
-    color: #dd5a5a;
-    p{
-        color: #dd5a5a;
-    }
-    .nav{
-        display: flex;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: rgb(49, 102, 194);
-        transition: background-color 0.5s;
-        justify-content: center;
-        padding: 5px;
-        gap: 4em;
-        
-    }
-    a{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-      }
-      a:hover{
-        color: rgb(255, 0, 195);
-        transition: 0.6s;
-        transform: scale(1.1);
-      }
 
-    section{
-    padding: 20px;
-    margin: 20px 0;
-    background-color: rgba(248, 217, 251, 0.8);
-    border-radius: 10px;
-    transition: background-color 0.5s;
-    }
-    .item p{
-        color: white;
-    }
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* impede rolagem horizontal*/
+  p{
+    color: #dd00ff;
   }
-  
-  
-  body.dark-mode {
-    background: linear-gradient(rgb(0, 0, 0), rgb(54, 0, 72));
-    color: #ffffff;
-    p{
-        color: #dd00ff;
-    }
-    .nav{
-        display: flex;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0);
-        transition: background-color 0.5s;
-        justify-content: center;
-        gap: 4em;
-        padding: 5px; 
-    }
-    a{
-        text-decoration: none;
-        color: rgb(112, 0, 204);
-      }
-      a:hover{
-        color: rgb(0, 255, 149);
-        transition: 0.6s;
-        transform: scale(1.1);
-      }
+  font-family: 'Courier New', Courier, monospace;
+}
 
-    section{
-        padding: 20px;
-    margin: 20px 0;
-    background-color: rgba(30, 30, 30, 0.8);
-    border-radius: 10px;
-    transition: background-color 0.5s;
-    }
-    .item p{
-        color: white;
-    }
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1); /* Fundo inicial colorido */
+  padding: 10px 20px;
+  transition: background-color 0.5s ease; /* Transição suave */
+  z-index: 1000; /* Mantém a navegação acima de outros elementos */
+  justify-content: center;
+  gap: 20px;
+  padding: 20px; 
+}
+.nav.transparent {
+  background-color: rgba(0, 0, 0, 0); /* Torna o fundo transparente */
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(112, 0, 204);
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: rgb(0, 255, 149);
+    transition: 0.6s;
+    transform: scale(1.1);
+}  
+section {
+  padding: 20px;
+  margin: 0px 0;
+  height: 100vh; /* Cada seção ocupa uma tela inteira */
+  scroll-snap-align: start; /* Encaixa cada seção no início */
+}
+
+/*-----------------------------ABA DO SOBRE---------------------------------- */
+#sobre {
+  height: 100vh; 
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: #fff; 
+  position: relative;
+  z-index: 1; 
+
+  p{
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: white;
   }
+}
+
+.nome {
+  display: inline-block;
+  opacity: 0; /* Começa invisível */
+  -webkit-animation: text-flicker-variable-speed 4s linear forwards; /* Sincronizado, executa uma vez */
+  animation: text-flicker-variable-speed 4s linear forwards;
+  font-family: Arial, sans-serif;
+  font-size: 4rem; /* Tamanho grande */
+  text-transform: uppercase; /* Tudo em maiúsculo */
+  margin-bottom: 75px;
+}
+
+/* Keyframes para o efeito de flicker no nome completo */
+@keyframes text-flicker-variable-speed {
+  0%, 5% { opacity: 0; } /* Piscar rápido */
+  10% { opacity: 1; text-shadow: 0 0 30px rgba(255, 255, 255, 0.25); }
+  15%, 20% { opacity: 0; }
+  25%, 50% { opacity: 1; text-shadow: 0 0 30px rgba(255, 255, 255, 0.45); }
+  55%, 60% { opacity: 0; } /* Piscar mais devagar */
+  75%, 90% { opacity: 1; text-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
+  100% { 
+      opacity: 1; /* Texto aceso e estático */
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 
+                   0 0 60px rgba(255, 255, 255, 0.45), 
+                   0 0 110px rgba(255, 255, 255, 0.25); 
+  }
+}
+
+.efeito-expandir{
+  font-size: 15px;
+  color: white;
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both, text-flicker-variable-speed 4s linear forwards;;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*-----------------------------FIM DA ABA DO SOBRE---------------------------------- */
+#educação{
+  margin: 0px;
+  background-color: #dcbb36;
+}
+#hobbies{
+
+}
+#interesses{
+ 
+}
+
+#favoritos{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; /* Imagem cobre toda a altura e largura */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+  transition: background-image 0.7s ease, background-size 0.7s ease; /* Transições suaves */
+  background-image: url('https://theridgewoodblog.net/wp-content/uploads/2023/09/google-home-page-ss-1920-1363269384.jpg'); 
   
-  .container {
+  .lista{
+    z-index: 1;
     display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 40px;
-  }
-  
-  .label {
-    height: 60px;
-    width: 120px;
-    background-color: #ffffff;
-    border-radius: 30px;
-    -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
-      inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
-      inset 0 0 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
-      inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
-      inset 0 0 0 3px rgba(0, 0, 0, 0.3);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
-  }
-  
-  .label:hover {
-    -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
-    transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
-  }
-  
-  #checkbox:checked ~ .label:hover {
-    -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
-    transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
-  }
-  
-  #checkbox {
-    display: none;
-  }
-  
-  #checkbox:checked ~ .label::before {
-    left: 70px;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  
-  .label::before {
-    position: absolute;
-    content: "";
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: #000000;
-    background-image: linear-gradient(
-      130deg,
-      #757272 10%,
-      #ffffff 11%,
-      #726f6f 62%
-    );
-    left: 10px;
-    -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
-      10px 10px 10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-  }
-  
-.lista{
-    display: flex;
+    margin-top: 75px;
     justify-content: center;
     gap: 1.5em;
-    
-}
-.item{
+  }
+  .item{
+    z-index: 2;
     width: 250px;
     height: 450px;
     overflow: hidden;
     position: relative;
     transition: 0.7s;
-}
-img{
-    border-radius: 5%;
-}
-.item p{
+  }
+  img{
+      border-radius: 5%;
+  }
+  .item p{
+    text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+      width: 80%;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 1s;
+      opacity: 0;
+      color: white;
+  }
+  .item:hover{
+      transform: scale(1.1);
+  }
+  .item:hover p{
+      opacity: 1;
+      top: 50%;
+  }
+  .lista:hover .item:not(:hover){
+      filter: blur(5px);
+  }
+  .lista {
+    position: relative;
+    z-index: 1; /* Fica acima do background */
+  }
+  h1{
+    font-size: xx-large;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    width: 80%;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-    opacity: 0;
-}
-.item:hover{
-    transform: scale(1.1);
-}
-.item:hover p{
-    opacity: 1;
-    top: 50%;
-}
-.lista:hover .item:not(:hover){
-    filter: blur(5px);
-}
-.contatos{
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    border-radius: 20%;
-    gap: 3em;
+    margin-top: 90px;
+  }
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.7s ease; /* Transição suave na opacidade */
+  z-index: 0;
+}
+#habilidades{
+  
+}
+#contato{
+  height: 10vh; /* Altura ajustada para parecer um rodapé */
+  background-color: #000; /* Fundo preto para destacar como rodapé */
+  display: flex; /* Habilita o flexbox no contêiner principal */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  align-items: center; /* Centraliza verticalmente os itens */
+
+  .contatos {
+    display: flex; /* Alinha itens dentro da classe .contatos */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 3em; /* Espaçamento entre os itens */
+    margin: 0; /* Remove qualquer margem extra */
+    padding: 0; /* Remove espaçamento interno */
+    border-radius: 20%; /* Mantém bordas arredondadas nos elementos dentro, se aplicável */
+  }
 }

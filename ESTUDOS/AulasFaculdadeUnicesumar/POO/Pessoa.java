@@ -5,7 +5,6 @@ public class Pessoa {
     private int idade;
 
 
-
     public static void main(String[] args) {
         Pessoa p1 = new Pessoa("José", 41);
         p1.exibirPessoa();
@@ -17,4 +16,5 @@ public class Pessoa {
     public void exibirPessoa(){
         System.out.println(nome + " " + idade + " anos");
     }
+
 }
