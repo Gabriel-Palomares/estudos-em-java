@@ -125,10 +125,48 @@ section {
 }
 
 /*-----------------------------FIM DA ABA DO SOBRE---------------------------------- */
+
+
+/*-----------------------------INICIO DA ABA DO EDUCAÇÃO---------------------------------- */
 #educação{
   margin: 0px;
   background-color: #dcbb36;
+
+  
 }
+.gaveteiro{
+  background-color: #000;
+  align-items: center;
+  text-align: center;
+}
+.gaveta{
+
+  background-color: black;
+  height: 20vh;
+  h1{
+    
+    color: white;
+    opacity: 1;
+  }
+  p{
+    opacity: 0;
+  }
+ 
+}
+.gaveta:hover { 
+  background-color: white;
+  h1{
+    opacity: 0;
+  }
+  p{
+    opacity: 1;
+  }
+}
+
+
+
+
+/*-----------------------------FIM DA ABA DO EDUCAÇÃO---------------------------------- */
 #hobbies{
 
 }
@@ -169,15 +207,15 @@ section {
   }
   .item p{
     text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-      width: 80%;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: 1s;
-      opacity: 0;
-      color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    opacity: 0;
+    color: white;
   }
   .item:hover{
       transform: scale(1.1);

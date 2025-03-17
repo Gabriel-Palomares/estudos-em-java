@@ -1,0 +1,139 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+    height: 100vh;
+    position: relative;
+}
+.item {
+    position: relative;
+    width: 205px; 
+    height: 500px; 
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 1s;
+}
+.item .img-box{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    transition: 1s;
+}
+.detalhes {
+    position: absolute;
+    bottom: -270px;
+    width: 100%;
+    background: #fff;
+    padding: 20px; 
+    box-sizing: border-box;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 1s;
+}
+.detalhes h2{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    width: 100%;
+    font-size: 16px;
+}
+.detalhes preco{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+label{
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+ul{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+ul li{
+    list-style: none;
+    margin: 5px 5px 0;
+    font-size: 12px;
+    font-weight: normal;
+    color: #bbb;
+    transition: 0.7s;
+
+}
+ul li:hover{
+    cursor: pointer;
+    color: #333;
+    transition: 0.7s;
+}
+ul li:first-child{
+    margin-left: 0;
+
+}
+ul.cores li{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ul.cores li:hover{
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+ul.cores li:nth-child(1){
+    background: #9F8AA2;
+}
+ul.cores li:nth-child(2){
+    background: #9F8AA2;
+}
+ul.cores li:nth-child(3){
+    background: #9F8AA2;
+}
+a {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    margin: 15px 0 0;
+    background: #333;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 1s;
+
+}
+a:hover{
+    background: #666;
+    transition: 1s;
+}
+.item:hover{
+    background: #666;
+    transition: 1s;
+}
+.item:hover .detalhes{
+    overflow: visible;
+    bottom: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    transition: 1s;
+
+}
+.item:hover .img-box {
+    position: absolute;
+    bottom: 120px; 
+    transition: 3s;
+}
+.item:hover h2,
+.item:hover .preco {
+    padding-top: 40px; 
+    padding-bottom: 0;
+}
