@@ -336,37 +336,6 @@ footer .Contato a{
 /* ==========================
    RESPONSIVIDADE
    ========================== */
-@media (max-width: 768px) {
-    .grid-container, .grid-container1 {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav {
-        position: relative;
-    }
-}
-
-@media (max-width: 1568px) {
-    .grid-container, .grid-container1 {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav {
-        position: relative;
-    }
-}
 
 /* ==========================
    Pag 2

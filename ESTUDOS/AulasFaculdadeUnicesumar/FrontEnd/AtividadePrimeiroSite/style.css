@@ -130,39 +130,80 @@ section {
 /*-----------------------------INICIO DA ABA DO EDUCAÇÃO---------------------------------- */
 #educação{
   margin: 0px;
-  background-color: #dcbb36;
-
+  background-color: #d7d7d7;
+}
+.gavetaço {
   
 }
 .gaveteiro{
-  background-color: #000;
-  align-items: center;
-  text-align: center;
+  perspective: 1000px;
 }
-.gaveta{
-
-  background-color: black;
+.gaveteiro .gaveta{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.7s;
+  gap: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(89, 89, 89);
   height: 20vh;
-  h1{
-    
-    color: white;
-    opacity: 1;
-  }
+}
+.gaveta .titulo{
+  position: absolute;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.gaveta .texto{
   p{
+    margin: 20px;
+    color: black;
     opacity: 0;
   }
- 
 }
 .gaveta:hover { 
+  transform: rotateX(180deg);
   background-color: white;
+  transition: 1s;
   h1{
     opacity: 0;
   }
   p{
     opacity: 1;
+    color:#000
   }
 }
-
+.gaveta:hover .texto{
+  transform: rotateX(180deg);
+  -webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 
 
@@ -226,6 +267,7 @@ section {
   }
   .lista:hover .item:not(:hover){
       filter: blur(5px);
+      transform: scale(.9);
   }
   .lista {
     position: relative;
@@ -257,18 +299,254 @@ section {
 }
 #contato{
   height: 10vh; /* Altura ajustada para parecer um rodapé */
-  background-color: #000; /* Fundo preto para destacar como rodapé */
+  background-color: #333333; /* Fundo preto para destacar como rodapé */
   display: flex; /* Habilita o flexbox no contêiner principal */
   justify-content: center; /* Centraliza horizontalmente os itens */
   align-items: center; /* Centraliza verticalmente os itens */
 
   .contatos {
-    display: flex; /* Alinha itens dentro da classe .contatos */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    gap: 3em; /* Espaçamento entre os itens */
-    margin: 0; /* Remove qualquer margem extra */
-    padding: 0; /* Remove espaçamento interno */
-    border-radius: 20%; /* Mantém bordas arredondadas nos elementos dentro, se aplicável */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+  }
+
+/* INSTAGRAM BOTAO------------------------------------------- */
+
+.botaoinstagram button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255,0,0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255,0,0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+
+}
+
+.botaoinstagram button span {
+  margin: 10px;
+  text-decoration: none;
+}
+
+.botaoinstagram button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.botaoinstagram button:hover {
+  color: #fff;
+  border: 1px solid rgb(255,0,0);
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botaoinstagram button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(255, 0, 0);
+}
+
+/* DISCORD BOTAO ---------------------------------------------*/
+
+.botaodiscord button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4f4dd9 0%,#2b60aa 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  width: 10em;
+  height: 2.8em;
+}
+
+.botaodiscord button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botaodiscord button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botaodiscord button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.botaodiscord button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.botaodiscord button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.botaodiscord button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.botaodiscord button:hover svg {
+  transform: rotate(360deg);
+}
+
+/* DISCORD BOTAO ---------------------------------------------*/
+
+/* EMAIL BOTAO------------------------------------------------*/
+.botaoemail button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 6em;
+  height: 2.5em;
+}
+
+.botaoemail button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.botaoemail button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+
+}
+.botaoemail button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.botaoemail button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.botaoemail button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.botaoemail button:hover span {
+  transform: translateX(5em);
+}
+
+.botaoemail button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
   }
 }
+/* EMAIL BOTAO------------------------------------------------*/
+
+
+  /* WHATSZAP BOTAO------------------------------------------------*/
+  .botaozap button {
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 5px;
+    position: relative;
+    width: 6em;
+    height: 2.5em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 25px;
+  }
+  
+  .botaozap button p {
+    position: absolute;
+    top: 0.7em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+  }
+  
+  .botaozap button svg {
+    position: absolute;
+    top: 0.7em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+  }
+  .botaozap button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .botaozap button:hover p {
+    left: 0.5em;
+    color: #fff
+  }
+  
+  .botaozap button:hover svg {
+    opacity: 1;
+  }
+  
+  .botaozap button:hover {
+    background-color: #25D366;
+  }
+  /* WHATSZAP BOTAO------------------------------------------------*/
+
+}
+
+

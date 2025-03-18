@@ -3,10 +3,11 @@ package AulasFaculdadeUnicesumar.POO.Biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Autor {
+public class Autor extends Teste {
     private String nome;
     private String nacionalidade;
-    private List<Autor> autores = new ArrayList<>();
+
+
 
     public Autor(String nome, String nacionalidade) {
         this.nome = nome;
@@ -28,12 +29,8 @@ public class Autor {
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
     }
-
-    public List<Autor> getAutores() {
-        return autores;
+    public void exibir(){
+        System.out.println("O autor " + getNome() + " do(a) " + getNacionalidade());
+    }
     }
 
-    public void setAutores(List<Autor> autores) {
-        this.autores = autores;
-    }
-}

@@ -3,10 +3,11 @@ package AulasFaculdadeUnicesumar.POO.Biblioteca;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Livro {
+public class Livro extends Teste{
     private String titulo;
     private int anoDePublicacao;
-    private List<Autor> livros = new ArrayList<>();
+
+
 
     public Livro(String titulo, int anoDePublicacao){
         this.titulo = titulo;
@@ -28,12 +29,7 @@ public class Livro {
     public void setAnoDePublicacao(int anoDePublicacao) {
         this.anoDePublicacao = anoDePublicacao;
     }
-
-    public List<Autor> getLivros() {
-        return livros;
-    }
-
-    public void setLivros(List<Autor> livros) {
-        this.livros = livros;
+    public void exibir(){
+        System.out.println("O livro " + getTitulo() + " de " + getAnoDePublicacao());
     }
 }
