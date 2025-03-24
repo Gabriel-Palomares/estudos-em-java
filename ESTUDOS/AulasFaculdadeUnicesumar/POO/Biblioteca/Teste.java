@@ -41,8 +41,8 @@ public class Teste {
         for (Autor autores:listA){
             autores.exibir();
         }
-        for (Livro livros:lista){
-            livros.exibir();
+        for (Livro livro: lista){
+            livro.exibir();
         }
     }
 
