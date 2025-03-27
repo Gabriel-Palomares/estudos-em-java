@@ -36,7 +36,7 @@ public class Carrinho {
 
             } else if (escolha == 2) {
                 int i = 0;
-                System.out.println("qual produto deseja encontrar pelo nome: ");
+                System.out.println("qual produto deseja encontrar pelo id: ");
                 int buscaId = scanner.nextInt();
                 for (Produto produto:lista){
                     i++;
