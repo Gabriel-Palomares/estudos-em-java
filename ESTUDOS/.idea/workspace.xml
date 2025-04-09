@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f99e2e5-776e-4ebf-9c68-d7d16badc0e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Biblioteca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Livro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Concensionária/Carro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Concensionária/Veiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Jogos/Jogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Jogos/Teste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Jogos/jogoDeAcao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Jogos/jogoDeEsporte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Jogos/jogoDeEstrategia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Loja/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Loja/Gerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Loja/LojaCadastro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/SistemaControleEstoque/Loja.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/SistemaControleEstoque/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/EstruturaDeDados/AulaFila.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/EstruturaDeDados/EstruturaDeDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/EstruturaDeDados/EstruturaDeDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/EstruturaDeDados/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/EstruturaDeDados/Teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Biblioteca/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Biblioteca/Teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Mercado/Carrinho.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/Mercado/Carrinho.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/VisualExecução/codigo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/VisualExecução/img/winxp.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/VisualExecução/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/VisualExecução/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/FrontEnd/AtividadePrimeiroSite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/FrontEnd/AtividadePrimeiroSite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/FrontEnd/AtividadePrimeiroSite/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/FrontEnd/AtividadePrimeiroSite/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/AulasFaculdadeUnicesumar/POO/BibliotecaComUsuario/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

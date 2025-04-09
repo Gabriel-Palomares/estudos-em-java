@@ -323,11 +323,10 @@ section {
 .txt-box{
   padding: 30px;
   margin-left: 60px;
-  width: 400px;
-  height: 550px;
   background-color: #343131b2;
   border-radius: 10px;
   text-align: center;
+  
   .txt{
   color: #850099;
   opacity: 1;
@@ -335,7 +334,56 @@ section {
 }
 
 #interesses{
- 
+  
+  display: flex;
+  background-color: #0a1732;
+  width: 100vw;
+  height: 100vh;
+
+
+  .txt-interesse{
+  margin-top: 200px;
+  margin-right: 200px;
+  height: 330px;
+  width: 400px;
+  padding: 30px;
+  margin-left: 60px;
+  background-color: #4b4747b2;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.card-container > * {
+  margin-top: 200px;
+  width: 340px;
+  height: 120px;
+  border: solid 1px #bebebe;
+  background-color: #1f1f1f;
+  position: absolute;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 0px 8px 20px -10px #bbbbbb;
+  text-shadow: 0px 0px 5px #fff;
+  letter-spacing: 1px;
+  background-image: radial-gradient(circle 160px at 50% 120%, #353535, #1f1f1f);
+}
+  
+.card1 {
+  width: 300px;
+  margin: -20px 0px 0px 20px;
+}
+.card2 {
+  width: 320px;
+  margin: -10px 0px 0px 10px;
+}
+.card3{
+  width: 340px;
+  margin: 0px 0px 0px 0px;
+}
+  
 }
 
 #favoritos{
@@ -671,5 +719,3 @@ section {
   /* WHATSZAP BOTAO------------------------------------------------*/
 
 }
-
-

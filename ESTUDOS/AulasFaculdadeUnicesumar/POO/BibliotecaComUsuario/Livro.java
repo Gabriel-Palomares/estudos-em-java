@@ -13,21 +13,12 @@ public class Livro extends Biblioteca {
         this.emprestado = emprestado;
     }
 
-    public boolean livroExiste(String isbn){
-        for (Livro livro: livros){
-            if (isbn.equals(livro.isbn)){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void emprestar(){
-        if (emprestado = true){
+    public boolean emprestar(){
+        if (emprestado){
             System.out.println("Este Livro esta emprestado");
-        }else {
-            this.emprestado = true;
         }
+        this.emprestado = true;
+        return emprestado;
     }
 
     public void devolver(){
