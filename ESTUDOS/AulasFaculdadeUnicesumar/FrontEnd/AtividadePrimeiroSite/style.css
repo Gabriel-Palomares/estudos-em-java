@@ -128,7 +128,7 @@ section {
 
 
 /*-----------------------------INICIO DA ABA DO EDUCAÇÃO---------------------------------- */
-#educação{
+#educacao{
   margin: 0px;
   background-color: #d7d7d7;
   .secao-estrelas {
@@ -182,15 +182,12 @@ section {
     transform: rotate(0);
   }
 }
-
-}
-.gavetaço {
-  
 }
 .gaveteiro{
   perspective: 1000px;
 }
 .gaveteiro .gaveta{
+  font-size: 14px;
   position: relative;
   transform-style: preserve-3d;
   transition: 0.7s;
@@ -255,26 +252,32 @@ section {
     opacity: 1;
   }
 }
-.gaveteiro .gaveta:nth-child(1):hover~ .gaveta:not(:hover){
-  
+#educacao {
+  width: 100%;
+  height: 100vh; /* Preenche toda a tela */
+  background-size: cover; /* Faz a imagem cobrir a sessão */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+  transition: background-image 0.5s ease; /* Garante transição suave */
 }
-.gaveteiro .gaveta:nth-child(2):hover~ .gaveta:not(:hover){
 
+.gaveteiro .gaveta {
+  cursor: pointer; /* Adiciona um indicador de interatividade */
 }
-.gaveteiro .gaveta:nth-child(3):hover~ .gaveta:not(:hover){
 
-}
-.gaveteiro .gaveta:nth-child(4):hover~ .gaveta:not(:hover){
-
-}
 /*-----------------------------FIM DA ABA DO EDUCAÇÃO---------------------------------- */
+
 #hobbies {
+  padding: 2rem;
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
   background-color: rgb(0, 6, 24);
   align-items: center;
+}
+h2{
+  color: white;
 }
 
 #hobbies::before {
@@ -320,72 +323,40 @@ section {
     transform: rotate(360deg);
   }
 }
-.txt-box{
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #343131b2;
-  border-radius: 10px;
-  text-align: center;
-  
-  .txt{
-  color: #850099;
-  opacity: 1;
-  }
+.conteudo-hobbies {
+  max-width: 960px;
 }
 
-#interesses{
-  
-  display: flex;
-  background-color: #0a1732;
-  width: 100vw;
-  height: 100vh;
-
-
-  .txt-interesse{
-  margin-top: 200px;
-  margin-right: 200px;
-  height: 330px;
-  width: 400px;
-  padding: 30px;
-  margin-left: 60px;
-  background-color: #4b4747b2;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
+.caixa-hobby {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 1rem;
+  background-color: #ffffff;
 }
 
-
-.card-container > * {
-  margin-top: 200px;
-  width: 340px;
-  height: 120px;
-  border: solid 1px #bebebe;
-  background-color: #1f1f1f;
-  position: absolute;
-  border-radius: 10px;
-  padding: 15px;
-  color: #fff;
-  box-shadow: 0px 8px 20px -10px #bbbbbb;
-  text-shadow: 0px 0px 5px #fff;
-  letter-spacing: 1px;
-  background-image: radial-gradient(circle 160px at 50% 120%, #353535, #1f1f1f);
-}
-  
-.card1 {
-  width: 300px;
-  margin: -20px 0px 0px 20px;
-}
-.card2 {
-  width: 320px;
-  margin: -10px 0px 0px 10px;
-}
-.card3{
-  width: 340px;
-  margin: 0px 0px 0px 0px;
-}
-  
+.titulo-cartao {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
+.texto-cartao {
+  font-size: 1rem;
+  color: #495057;
+}
+
+.texto-pequeno {
+  font-size: 0.875rem;
+}
+
+.texto-suave {
+  color: #6c757d;
+}
+
+.sombra-suave {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* FAVORITOS*/
 #favoritos{
   position: relative;
   height: 100vh;
@@ -465,23 +436,24 @@ section {
   transition: opacity 0.7s ease; /* Transição suave na opacidade */
   z-index: 0;
 }
-#habilidades{
-  
-}
+
 #contato{
-  height: 10vh; /* Altura ajustada para parecer um rodapé */
-  background-color: #333333; /* Fundo preto para destacar como rodapé */
-  display: flex; /* Habilita o flexbox no contêiner principal */
-  justify-content: center; /* Centraliza horizontalmente os itens */
-  align-items: center; /* Centraliza verticalmente os itens */
+  height: 115vh; 
+  background-color: #212121; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; 
 
   .contatos {
     display: flex;
     align-items: center;
     gap: 30px;
-    
+    margin-top: 10px;
   }
 
+  
 /* INSTAGRAM BOTAO------------------------------------------- */
 
 .botaoinstagram button {
@@ -717,5 +689,32 @@ section {
     background-color: #25D366;
   }
   /* WHATSZAP BOTAO------------------------------------------------*/
-
+  .botaoCurriculo {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    padding: 10px 5px;
+    width: 6em;
+    height: 2.5em;
+    font-size: 17px;
+    border-radius: 25px;
+  }
+  
+  .botaoCurriculo:hover,
+  :focus {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+  }
 }

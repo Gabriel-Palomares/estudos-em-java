@@ -7,6 +7,7 @@ public class AulaFila {
     private int dadosInseridos= -1;
     private int tam;
     private int ultimo = -1;
+    private int primeiro;
 
     public AulaFila(ArrayList<AulaFila> fila, int dadosInseridos, int tam, int ultimo) {
         this.fila = fila;
@@ -15,14 +16,16 @@ public class AulaFila {
         this.ultimo = ultimo;
     }
 
-    public void enfileirar(int valor){
+    public int enfileirar(int valor){
         if (estaVazio()){
-            fila[this.ultimo + 1] = valor;
-            this.dadosInseridos++;
-            this.ultimo++;
+            primeiro = 0;
         }
+        if (estaCheia()){
 
-
+        }
+        this.fila[this.ultimo + 1] = valor;
+        this.dadosInseridos++;
+        this.ultimo++;
     }
 
     public void desenfileirar(){

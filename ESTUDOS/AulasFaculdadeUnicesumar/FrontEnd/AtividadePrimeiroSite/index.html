@@ -9,6 +9,8 @@
     <title>Sobre Mim</title>
     <link rel="icon" type="image/x-icon" href="imagens/gatocypher.jpeg">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -16,11 +18,9 @@
     <nav>
         <div class="nav">
             <a href="#sobre">Sobre</a>  
-            <a href="#educação">Educação</a>    
-            <a href="#hobbies">Hobbies</a>  
-            <a href="#interesses">Interesses</a>    
+            <a href="#educacao">Educação</a>    
+            <a href="#hobbies">Hobbies</a>     
             <a href="#favoritos">Sites Favoritos</a>
-            <a href="#habilidades">Habilidades</a>
             <a href="#contato">Contato</a>
         </div>
     </nav>
@@ -35,9 +35,9 @@
            
         </section> 
 
-        <section id="educação">
+        <section id="educacao">
             <h2>Educação</h2>
-            <div class="gavetaço">
+            
                 <div class = "gaveteiro">
                    <div class = "gaveta">
                        <div class="titulo"><h1>ENSINO MÉDIO - ETEC AB</h1></div>
@@ -56,32 +56,50 @@
                        <div class="titulo"><h1>FACULDADE 3 - UNICESUMAR PG</h1></div>
                        <div class="texto"><p>E a terceira e ultima até agora é na <strong>UNICESUMAR</strong> onde estou cursando <strong>Engenharia de Software</strong> e até agora é de longe o lugar e curso mais divertido que faço. Ir atrás de informação e estudar sobre a área é algo bem leve, até então estudar sempre foi algo massante e estressante nos outros campus e curso. A idéia de Engenharia de Software veio de uma matéria que tive na UTFPR que tivemos aulas de computação 1 e 2 com programação e o basico de banco de dados, foi a primeira vez que senti que aprendi algo (mesmo que basico) e senti um certo dominio. Foi uma ótima decisão, e pra planos futuros penso em fazer um mestrado na área e estudar mais sobre desenvolvimento porque acho muito divertido.</p></div>   
                    </div>     
-                </div>  
-            </div>   
+                </div>    
         </section>
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-                <div class="txt-box">
-                    <p class="txt">Atualmente não tenho muitos hobbies, gosto de assistir filmes/animes, ouvir musica e jogar com amigos. Já tive minha época de esportes e de musico mas atualmente bem pouco ativo. Gosto sempre de experimentar de tudo um pouco o que me levou a praticar diversos esportes e a aprender muitos instrumentos durante minha vida, sou percussionista, cantor e toco violoncelo além de outros instrumentos num nivel mais amador como violão, violino e piano. Um dos meus hobbies atuais que mais pratico atualmente é o de estudar, confesso que nunca fui muito fã mas recentemente ando conseguindo me divertir bastante aprendendo sobre programação e a area de desenvolvimento.</p>
+        <section id="hobbies" class="py-5 d-flex align-items-center justify-content-center">
+            <div class="container conteudo-hobbies text-center">
+              <h2 class="mb-4 fw-bold">Meus Hobbies</h2>
+              <p class="lead mb-5">
+                Gosto de explorar tudo um pouco — de tecnologia à música, de jogos a conversas profundas. Aqui estão algumas coisas que me movem:
+              </p>
+              <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                  <div class="card caixa-hobby h-100 sombra-suave">
+                    <div class="card-body">
+                      <h5 class="titulo-cartao">🎮 Jogar & Socializar</h5>
+                      <p class="texto-cartao">Nada como reunir os amigos para uma jogatina ou boas conversas. Filmes, animes e games fazem parte da rotina.</p>
+                    </div>
+                  </div>
                 </div>
-            <div class="hobbies-box"></div>
-          </section>
-        <section id="interesses">
-            <h2>Interesses</h2>
-            <div class = "txt-interesse">De uma forma bem resumida gosto de tecnologia e coisas novas/diferentes, gosto de saber como as coisas funcionam e gosto de tentar faze-las funcionar do meu jeito, as vezes só seguir o manual não é o caminho mais divertido a se seguir. Profissionalmente falando ainda não tenho uma visão clara de quais são meus interesses sempre pensei em algo como desenvolvimento de ambientes em RA / RV (realidade aumentada e realidade virtual) ou IA (machine learning) mas imagino que parte da curiosidade seja o fato de não ter ideia de como algumas dessas coisas funcionam. Gosto de problemas de lógica e de pensar em problemas pra tentar antecipar eles.</div>
-            <div class="card-container">
-                <div class="card1">
-
+          
+                <div class="col-md-4">
+                  <div class="card caixa-hobby h-100 sombra-suave">
+                    <div class="card-body">
+                      <h5 class="titulo-cartao">🥁 Música & Criatividade</h5>
+                      <p class="texto-cartao">Percussionista, cantor e violoncelista — já toquei de tudo um pouco, e música continua sendo uma paixão forte.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="card2">
-
-                </div>
-                <div class="card3">
-                    
+          
+                <div class="col-md-4">
+                  <div class="card caixa-hobby h-100 sombra-suave">
+                    <div class="card-body">
+                      <h5 class="titulo-cartao">💻 Curiosidade & Tecnologia</h5>
+                      <p class="texto-cartao">Hoje, meu maior hobby é aprender. Tenho me divertido com programação, lógica e tentando entender como tudo funciona.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-        </section>
-
+          
+              <p class="mt-5 texto-pequeno texto-suave">
+                Também tenho interesse em áreas como Realidade Aumentada, Inteligência Artificial e resolução de problemas lógicos. Nem sempre sigo o manual — gosto de experimentar o caminho por conta própria.
+              </p>
+            </div>
+          </section>
+          
+                    
         <section id="favoritos">
             <div class="background">
             <h1>Sites Favoritos</h1>
@@ -128,16 +146,71 @@
                         </p>
                 </div>
             </div>
-            <p>...</p>
             </div>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <p>Gosto de ensinar, principalmente quando tenho um certo dominio do que quero discutir geralmente, me dou muito bem neste papel, sou uma pessoa que aprende relativamente rápido as coisas e sou bem proativo para tarefas e responsabilidades, trabalho bem em grupos desde que exista um nivel razoavel de comunicação e sou bem organizado.</p>
-        </section>
-
         <section id="contato">
+
+            <h2>Formulário</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+                <div class="col-md-6">
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="col-md-6">
+                    <label for="empresa" class="form-label">Empresa</label>
+                    <input type="text" class="form-control" id="empresa">
+                </div>
+                <div class="col-md-6">
+                    <label for="motivo" class="form-label">Motivo da Visualização</label>
+                    <select class="form-selecao" id="motivo">
+                        <option>Contratar</option>
+                        <option>Curiosidade</option>
+                        <option>Saber da sua vida</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Gostou do Currículo?</label>
+                    <div class="form-verificacao">
+                        <input class="form-verificacao-entrada" type="radio" name="gostou" id="sim">
+                        <label class="form-verificacao-etiqueta" for="sim">Sim</label>
+                    </div>
+                    <div class="form-verificacao">
+                        <input class="form-verificacao-entrada" type="radio" name="gostou" id="nao">
+                        <label class="form-verificacao-etiqueta" for="nao">Não</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="sugestoes" class="form-label">Sugestões</label>
+                    <textarea class="form-control w-80" id="sugestoes" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="botao botao-primario">Enviar</button>
+                </div>
+            </form>
+        
+            <hr>
+        
+            <h2>Comentários</h2>
+            <form class="row g-3">
+                <div class="col-md-12">
+                    <label for="comentario" class="form-label">Deixe seu comentário</label>
+                    <textarea class="form-control w-100" id="comentario" rows="4"></textarea>
+                <div class="col-12">
+                    <button type="submit" class="botao botao-sucesso">Comentar</button>
+                </div>
+            </form>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
  
             <div class="contatos">   
                 <div class="botaoinstagram"><a href="https://www.instagram.com/gabriel_palomares17" target="_blank"> <button><svg viewBox="0 0 16 16" class="bi bi-instagram" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg><span>Instragram</span></button></a></li></div>
@@ -177,6 +250,12 @@
                     <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
                 </svg></button></a></li>
             </div>
+            <button class = "botaoCurriculo"onclick="abrirCurriculo()">Currículo</button>
+            <script>
+            function abrirCurriculo() {
+                window.open('curriculo.html', '_blank');
+            }
+            </script>
             </div>     
 
             

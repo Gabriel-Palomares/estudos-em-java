@@ -68,3 +68,25 @@ items.forEach((item, index) => {
         favoritos.style.backgroundImage = `url('${imagemInicial}')`; // Volta à imagem inicial
     });
 });
+
+// alteração do fundo de educacao
+const imagem = [
+    "imagens/EtecAB.png",
+    "imagens/UTFPR-CP.png",
+    "imagens/UTFPR-PG.jpg",
+    "imagens/Unicesumar-PG.png"
+  ];
+  
+  // Seleciona todas as gavetas
+  const gavetas = document.querySelectorAll(".gaveta");
+  
+  // Adiciona eventos para cada gaveta
+  gavetas.forEach((gaveta, index) => {
+    gaveta.addEventListener("mouseenter", () => {
+      document.getElementById("educacao").style.backgroundImage = `url('${imagem[index]}')`;
+    });
+  
+    gaveta.addEventListener("mouseleave", () => {
+      document.getElementById("educacao").style.backgroundImage = "none"; // Remove a imagem ao sair
+    });
+  });
