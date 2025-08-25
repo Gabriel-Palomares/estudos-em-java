@@ -1,4 +1,3 @@
-package AulasFaculdadeUnicesumar.POO.Jogos.Matchmaking2;
 
 public class Jogador {
         String nome;
