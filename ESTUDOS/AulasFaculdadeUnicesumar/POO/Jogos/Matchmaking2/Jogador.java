@@ -20,5 +20,5 @@ public class Jogador {
         public void adicionarVitoria() {
             this.numeroDeVitorias++;
         }
-    }
+}
 
